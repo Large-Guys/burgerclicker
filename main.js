@@ -40,7 +40,7 @@ function OnClick_Microwave()
         Burgers -= cost;
         microwaves += 1;
         Update_BurgerCounter();
-        document.getElementById("MicrowaveCounter").innerHTML = ncost + "$ " + microwaves + " microwavess";
+        document.getElementById("MicrowaveCounter").innerHTML = ncost + "$ " + microwaves + " Microwaves";
     }
 }
 function OnClick_Factory()
@@ -52,7 +52,7 @@ function OnClick_Factory()
         Burgers -= cost;
         factories += 1;
         Update_BurgerCounter();
-        document.getElementById("FactoryCounter").innerHTML = ncost + "$ " + factories + " factories";
+        document.getElementById("FactoryCounter").innerHTML = ncost + "$ " + factories + " Factories";
     }
 }
 function OnClick_BonusBurger()
