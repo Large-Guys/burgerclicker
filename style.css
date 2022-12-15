@@ -46,6 +46,16 @@ img {
   font-size: 32px;
   color:white;
 }
+#BurgerBurgerCounter{
+  position:absolute;
+  width: 15%;
+  left: 15%;
+  top:47.5%;
+  text-align: center;
+  font-family: Font;
+  font-size: 32px;
+  color:white;
+}
 #FactoryCounter{
   position:absolute;
   width: 15%;
