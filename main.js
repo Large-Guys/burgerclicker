@@ -40,7 +40,7 @@ function OnClick_Microwave()
         Burgers -= cost;
         microwaves += 1;
         Update_BurgerCounter();
-        document.getElementById("microwavesCounter").innerHTML = ncost + "$ " + microwaves + " microwavess";
+        document.getElementById("MicrowaveCounter").innerHTML = ncost + "$ " + microwaves + " microwavess";
     }
 }
 function OnClick_Factory()
