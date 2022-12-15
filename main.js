@@ -16,7 +16,7 @@ function Update_BurgerCounter()
 }
 function OnClick_Burger()
 {
-    Burgers += 1*bonusBurgers;
+    Burgers += 1*(bonusBurgers+1);
     Update_BurgerCounter();
 }
 function OnClick_Employee()
