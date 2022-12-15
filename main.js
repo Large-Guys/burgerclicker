@@ -53,7 +53,7 @@ function Step()
     var adburger = 0
     adburger += employees;
     adburger += microwave*(5+employees/5);
-    adburger += factorys*(125*employees/20)
+    adburger += factorys*(150*employees/20)
     adburger/=60;
     Burgers += adburger;
 }
