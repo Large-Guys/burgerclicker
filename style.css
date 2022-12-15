@@ -1,0 +1,97 @@
+*{
+  margin: 0%;
+  background-color: #1a024d;
+}
+
+@font-face { font-family: Font; src: url('Raleway-SemiBold.ttf'); } 
+img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+#Burger{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 10%;
+  top: 40%;
+}
+#Product{
+  position:absolute;
+  width: 5%;
+  left: 2.5%;
+  top:2.5%;
+  transition: width 0.3s;
+}
+#EmployeeCounter{
+  position:absolute;
+  width: 15%;
+  left: 15%;
+  top:2.5%;
+  text-align: center;
+  font-family: Font;
+  font-size: 32px;
+  color:white;
+}
+#MicrowaveCounter{
+  position:absolute;
+  width: 15%;
+  left: 15%;
+  top:17.5%;
+  text-align: center;
+  font-family: Font;
+  font-size: 32px;
+  color:white;
+}
+#FactoryCounter{
+  position:absolute;
+  width: 15%;
+  left: 15%;
+  top:32.5%;
+  text-align: center;
+  font-family: Font;
+  font-size: 32px;
+  color:white;
+}
+#BurgerTextCounter
+{
+    font-family: Font;
+    font-size: 32px;
+    position:absolute;
+    width: 20%;
+    left: 40%;
+    top:33%;
+    text-align: center;
+    color:white;
+}
+#Product {
+  display: inline-block;
+  animation: rotation 1s infinite ease-in-out;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(-16deg);
+  }
+  50% {
+    transform: rotate(16deg);
+  }
+  100% {
+    transform: rotate(-16deg);
+  }
+}
+.ScaleButton:hover {
+    width: 7% !important;
+  }
+.ScaleButton:active
+  {
+    width: 3% !important;
+  }
+.ScaleButton{
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: width 0.4s;
+    
+}
