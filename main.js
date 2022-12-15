@@ -3,57 +3,67 @@ const burger = document.getElementById("Burger")
 
 var BPS = 0
 var employees = 0
-var microwave = 0
-var factorys = 0
+var microwaves = 0
+var factories = 0
 
-function Burger()
+function CalculateCost(basecost,numberOfBuildings)
 {
-    Burgers += 1;
+    return Math.floor(basecost*(1+(numberOfBuildings/2)))
+}
+function Update_BurgerCounter()
+{
     document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
 }
-function Employee()
+function OnClick_Burger()
 {
-    let cost = Math.floor(25*(1+(employees/4)))
-    let ncost = Math.floor(25*(1+((employees+1)/4)))
+    Burgers += 1;
+    Update_BurgerCounter();
+}
+function OnClick_Employee()
+{
+    let cost = CalculateCost(25,employees)
+    let ncost = CalculateCost(25,employees+1)
     if(Burgers >= cost)
     {
         Burgers -= cost;
         employees += 1;
-        document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
+        Update_BurgerCounter();
         document.getElementById("EmployeeCounter").innerHTML = ncost + "$ " + employees + " Employees";
     }
 }
-function Microwave()
+function OnClick_Microwave()
 {
-    let cost = Math.floor(250*(1+(microwave/4)))
-    let ncost = Math.floor(250*(1+((microwave+1)/4)))
+    let cost = CalculateCost(250,microwaves)
+    let ncost = CalculateCost(250,microwaves+1)
     if(Burgers >= cost)
     {
         Burgers -= cost;
-        microwave += 1;
-        document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
-        document.getElementById("MicrowaveCounter").innerHTML = ncost + "$ " + microwave + " Microwaves";
+        microwaves += 1;
+        Update_BurgerCounter();
+        document.getElementById("microwavesCounter").innerHTML = ncost + "$ " + microwaves + " microwavess";
     }
 }
-function Factory()
+function OnClick_Factory()
 {
-    let cost = Math.floor(1250*(1+(factorys/4)))
-    let ncost = Math.floor(1250*(1+((factorys+1)/4)))
+    let cost = CalculateCost(1250,factories)
+    let ncost = CalculateCost(1250,factories+1)
     if(Burgers >= cost)
     {
         Burgers -= cost;
-        factorys += 1;
-        document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
-        document.getElementById("FactoryCounter").innerHTML = ncost + "$ " + factorys + " Factorys";
+        factories += 1;
+        Update_BurgerCounter();
+        document.getElementById("FactoryCounter").innerHTML = ncost + "$ " + factories + " factories";
     }
 }
+
+//Update function (60 times per second)
 function Step()
 {
     document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
     var adburger = 0
     adburger += employees;
-    adburger += microwave*(5+employees/5);
-    adburger += factorys*(150*employees/20)
+    adburger += microwaves*(5+employees/5);
+    adburger += factories*(150*employees/20)
     adburger/=60;
     Burgers += adburger;
 }
