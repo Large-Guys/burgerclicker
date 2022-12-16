@@ -90,7 +90,10 @@ function Step()
     adburger += microwaves*(5+employees/5);
     adburger += factories*(150*employees/20)
     adburger += BurgerFabricator*(1000+(factories*50));
+    BPS = adburger;
     adburger/=60;
     Burgers += adburger;
+
+    document.getElementById('bps').innerHTML = `${BPS} BPS`;
 }
 setInterval(Step, 16);
