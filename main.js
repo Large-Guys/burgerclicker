@@ -81,6 +81,17 @@ function OnClick_BurgerFabricator()
     }
 }
 
+function GenerateSave()
+{
+    let str = Burgers+"s"+employees+"s"+microwaves+"s"+factories+"s"+bonusBurgers+"s"+BurgerFabricator;
+    let encodedstr = "";
+    for (let index = 0; index < str.length; index++) {
+        let c = str.charCodeAt(index);
+        encodedstr += String.fromCharCode(c+8);
+    }
+    console.log(encodedstr);
+}
+
 //Update function (60 times per second)
 function Step()
 {
@@ -90,10 +101,10 @@ function Step()
     adburger += microwaves*(5+employees/5);
     adburger += factories*(150*employees/20)
     adburger += BurgerFabricator*(1000+(factories*50));
-    BPS = adburger;
+    BPS = Math.round(adburger*10)/10;
     adburger/=60;
     Burgers += adburger;
-
+    GenerateSave();
     document.getElementById('bps').innerHTML = `${BPS} BPS`;
 }
 setInterval(Step, 16);
