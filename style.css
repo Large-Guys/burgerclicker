@@ -4,6 +4,8 @@
 
 body {
   background-color: #1a024d;
+  color: white;
+  font-family: Font;
 }
 
 @font-face { font-family: Font; src: url('Raleway-SemiBold.ttf'); } 
@@ -35,9 +37,8 @@ img {
   left: 15%;
   top:2.5%;
   text-align: center;
-  font-family: Font;
   font-size: 32px;
-  color:white;
+  
 }
 #BurgerFabricatorCounter
 {
@@ -46,9 +47,8 @@ img {
   left: 15%;
   top:62.5%;
   text-align: center;
-  font-family: Font;
   font-size: 32px;
-  color:white;
+  
 }
 #MicrowaveCounter{
   position:absolute;
@@ -56,9 +56,8 @@ img {
   left: 15%;
   top:17.5%;
   text-align: center;
-  font-family: Font;
   font-size: 32px;
-  color:white;
+  
 }
 #BurgerBurgerCounter{
   position:absolute;
@@ -66,9 +65,8 @@ img {
   left: 15%;
   top:47.5%;
   text-align: center;
-  font-family: Font;
   font-size: 32px;
-  color:white;
+  
 }
 #FactoryCounter{
   position:absolute;
@@ -76,20 +74,18 @@ img {
   left: 15%;
   top:32.5%;
   text-align: center;
-  font-family: Font;
   font-size: 32px;
-  color:white;
+  
 }
 #BurgerTextCounter
 {
-    font-family: Font;
-    font-size: 32px;
-    position:absolute;
-    width: 20%;
-    left: 77.5%;
-    top:33%;
-    text-align: center;
-    color:white;
+  font-size: 32px;
+  position:absolute;
+  width: 20%;
+  left: 77.5%;
+  top:33%;
+  text-align: center;
+    
 }
 #Product {
   display: inline-block;
@@ -118,4 +114,13 @@ img {
     -webkit-transition: -webkit-transform 0.4s;
     transition: width 0.4s;
     
+}
+
+#bps {
+  font-size: 32px;
+  position:absolute;
+  width: 20%;
+  left: 77.5%;
+  top:25%;
+  text-align: center;
 }
