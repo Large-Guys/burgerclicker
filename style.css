@@ -36,6 +36,17 @@ img {
   font-size: 32px;
   color:white;
 }
+#BurgerFabricatorCounter
+{
+  position:absolute;
+  width: 15%;
+  left: 15%;
+  top:62.5%;
+  text-align: center;
+  font-family: Font;
+  font-size: 32px;
+  color:white;
+}
 #MicrowaveCounter{
   position:absolute;
   width: 15%;

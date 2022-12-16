@@ -6,6 +6,7 @@ var employees = 0
 var microwaves = 0
 var factories = 0
 var bonusBurgers = 0
+var BurgerFabricator = 0
 function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings/2)))
@@ -67,6 +68,18 @@ function OnClick_BonusBurger()
         document.getElementById("BurgerBurgerCounter").innerHTML = ncost + "$ " + bonusBurgers + " Bonus Burgers";
     }
 }
+function OnClick_BurgerFabricator()
+{
+    let cost = CalculateCost(10000, BurgerFabricator);
+    let ncost = CalculateCost(10000,BurgerFabricator+1);
+    if(Burgers > cost)
+    {
+        Burgers -= cost;
+        BurgerFabricator += 1;
+        Update_BurgerCounter();
+        document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "$ " + BurgerFabricator + " Burger Fabricators";
+    }
+}
 
 //Update function (60 times per second)
 function Step()
@@ -76,6 +89,7 @@ function Step()
     adburger += employees;
     adburger += microwaves*(5+employees/5);
     adburger += factories*(150*employees/20)
+    adburger += BurgerFabricator*1000;
     adburger/=60;
     Burgers += adburger;
 }
