@@ -16,7 +16,7 @@ img {
   left: 0;
   right: 0;
   text-align: center;
-  width: 10%;
+  width: 30%;
   top: 40%;
 }
 #Product{
@@ -28,7 +28,7 @@ img {
 }
 #EmployeeCounter{
   position:absolute;
-  width: 15%;
+  width: 30%;
   left: 15%;
   top:2.5%;
   text-align: center;
@@ -49,7 +49,7 @@ img {
 }
 #MicrowaveCounter{
   position:absolute;
-  width: 15%;
+  width: 30%;
   left: 15%;
   top:17.5%;
   text-align: center;
@@ -59,7 +59,7 @@ img {
 }
 #BurgerBurgerCounter{
   position:absolute;
-  width: 15%;
+  width: 30%;
   left: 15%;
   top:47.5%;
   text-align: center;
@@ -69,7 +69,7 @@ img {
 }
 #FactoryCounter{
   position:absolute;
-  width: 15%;
+  width: 30%;
   left: 15%;
   top:32.5%;
   text-align: center;

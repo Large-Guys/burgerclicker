@@ -89,7 +89,7 @@ function Step()
     adburger += employees;
     adburger += microwaves*(5+employees/5);
     adburger += factories*(150*employees/20)
-    adburger += BurgerFabricator*1000;
+    adburger += BurgerFabricator*(1000+(factories*50));
     adburger/=60;
     Burgers += adburger;
 }
