@@ -9,7 +9,7 @@ var bonusBurgers = 0
 var BurgerFabricator = 0
 function CalculateCost(basecost,numberOfBuildings)
 {
-    return Math.floor(basecost*(1+(numberOfBuildings/2)))
+    return Math.floor(basecost*(1+(numberOfBuildings*2)))
 }
 function Update_BurgerCounter()
 {
@@ -29,7 +29,7 @@ function OnClick_Employee()
         Burgers -= cost;
         employees += 1;
         Update_BurgerCounter();
-        document.getElementById("EmployeeCounter").innerHTML = ncost + "$ " + employees + " Employees";
+        document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
     }
 }
 function OnClick_Microwave()
@@ -41,7 +41,7 @@ function OnClick_Microwave()
         Burgers -= cost;
         microwaves += 1;
         Update_BurgerCounter();
-        document.getElementById("MicrowaveCounter").innerHTML = ncost + "$ " + microwaves + " Microwaves";
+        document.getElementById("MicrowaveCounter").innerHTML = ncost + "B " + microwaves + " Microwaves";
     }
 }
 function OnClick_Factory()
@@ -53,7 +53,7 @@ function OnClick_Factory()
         Burgers -= cost;
         factories += 1;
         Update_BurgerCounter();
-        document.getElementById("FactoryCounter").innerHTML = ncost + "$ " + factories + " Factories";
+        document.getElementById("FactoryCounter").innerHTML = ncost + "B " + factories + " Factories";
     }
 }
 function OnClick_BonusBurger()
@@ -65,7 +65,7 @@ function OnClick_BonusBurger()
         Burgers -= cost;
         bonusBurgers += 1;
         Update_BurgerCounter();
-        document.getElementById("BurgerBurgerCounter").innerHTML = ncost + "$ " + bonusBurgers + " Bonus Burgers";
+        document.getElementById("BurgerBurgerCounter").innerHTML = ncost + "B " + bonusBurgers + " Bonus Burgers";
     }
 }
 function OnClick_BurgerFabricator()
@@ -77,7 +77,7 @@ function OnClick_BurgerFabricator()
         Burgers -= cost;
         BurgerFabricator += 1;
         Update_BurgerCounter();
-        document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "$ " + BurgerFabricator + " Burger Fabricators";
+        document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "B " + BurgerFabricator + " Burger Fabricators";
     }
 }
 
