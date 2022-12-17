@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #1a024d;
+  background-color: #171621;
   color: white;
   font-family: Font;
 }
@@ -36,6 +36,15 @@ img {
   width: 70%;
   left: 15%;
   top:2.5%;
+  text-align: center;
+  font-size: 32px;
+  
+}
+#SquareBurgerCounter{
+  position:absolute;
+  width: 70%;
+  left: 15%;
+  top:77.5%;
   text-align: center;
   font-size: 32px;
   

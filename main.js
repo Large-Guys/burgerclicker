@@ -6,7 +6,8 @@ var employees = 0
 var microwaves = 0
 var factories = 0
 var bonusBurgers = 0
-var BurgerFabricator = 0
+var burgerFabricator = 0
+var squareBurger = 0
 function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings*0.85)))
@@ -17,8 +18,22 @@ function Update_BurgerCounter()
 }
 function OnClick_Burger()
 {
-    Burgers += 1*(bonusBurgers+1);
+    let adburgers = 1*(bonusBurgers+1);
+    adburgers = Math.pow(adburgers,squareBurger);
+    Burgers += adburgers;
     Update_BurgerCounter();
+}
+function OnClick_SquareBurger()
+{
+    let cost = CalculateCost(500000,squareBurger)
+    let ncost = CalculateCost(500000,squareBurger+1)
+    if(Burgers >= cost)
+    {
+        Burgers -= cost;
+        squareBurger += 1;
+        Update_BurgerCounter();
+        document.getElementById("SquareBurgerCounter").innerHTML = ncost + "B " + squareBurger + " Square Burgers";
+    }
 }
 function OnClick_Employee()
 {
@@ -70,20 +85,20 @@ function OnClick_BonusBurger()
 }
 function OnClick_BurgerFabricator()
 {
-    let cost = CalculateCost(10000, BurgerFabricator);
-    let ncost = CalculateCost(10000,BurgerFabricator+1);
+    let cost = CalculateCost(10000, burgerFabricator);
+    let ncost = CalculateCost(10000,burgerFabricator+1);
     if(Burgers > cost)
     {
         Burgers -= cost;
-        BurgerFabricator += 1;
+        burgerFabricator += 1;
         Update_BurgerCounter();
-        document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "B " + BurgerFabricator + " Burger Fabricators";
+        document.getElementById("burgerFabricatorCounter").innerHTML = ncost + "B " + burgerFabricator + " Burger Fabricators";
     }
 }
 
 function GenerateSave()
 {
-    let str = Burgers+"s"+employees+"s"+microwaves+"s"+factories+"s"+bonusBurgers+"s"+BurgerFabricator;
+    let str = Burgers+"s"+employees+"s"+microwaves+"s"+factories+"s"+bonusBurgers+"s"+burgerFabricator;
     let encodedstr = "";
     for (let index = 0; index < str.length; index++) {
         let c = str.charCodeAt(index);
@@ -100,7 +115,7 @@ function Step()
     adburger += employees;
     adburger += microwaves*(5+employees/5);
     adburger += factories*(150*employees/20)
-    adburger += BurgerFabricator*(1000+(factories*50));
+    adburger += burgerFabricator*(1000+(factories*50));
     BPS = Math.round(adburger*10)/10;
     adburger/=60;
     Burgers += adburger;
