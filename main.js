@@ -92,7 +92,7 @@ function OnClick_BurgerFabricator()
         Burgers -= cost;
         burgerFabricator += 1;
         Update_BurgerCounter();
-        document.getElementById("burgerFabricatorCounter").innerHTML = ncost + "B " + burgerFabricator + " Burger Fabricators";
+        document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "B " + burgerFabricator + " Burger Fabricators";
     }
 }
 
