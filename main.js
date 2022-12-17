@@ -9,7 +9,7 @@ var bonusBurgers = 0
 var BurgerFabricator = 0
 function CalculateCost(basecost,numberOfBuildings)
 {
-    return Math.floor(basecost*(1+(numberOfBuildings*0.5)))
+    return Math.floor(basecost*(1+(numberOfBuildings*0.85)))
 }
 function Update_BurgerCounter()
 {
