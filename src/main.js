@@ -22,7 +22,7 @@ function Step()
 {
     UpdateInstructions();
     document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
-    var adburger = 0
+    let adburger = 0
     adburger += employees;
     adburger += microwaves*(5+employees/5);
     adburger += factories*(150*employees/15)
@@ -31,6 +31,6 @@ function Step()
     adburger/=60;
     Burgers += adburger;
     GenerateSave();
-    document.getElementById('bps').innerHTML = `${BPS} BPS`;
+    document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
 }
 setInterval(Step, 16);

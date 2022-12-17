@@ -1,14 +1,18 @@
-function OnClick_Burger()
+function CalculateBurgersPerClick()
 {
     let adburgers = 1*(bonusBurgers+1);
-    adburgers = Math.pow(adburgers,squareBurger);
-    Burgers += adburgers;
+    adburgers *= squareBurger+1;
+    return adburgers;
+}
+function OnClick_Burger()
+{
+    Burgers += CalculateBurgersPerClick();
     Update_BurgerCounter();
 }
 function OnClick_SquareBurger()
 {
-    let cost = CalculateCost(500000,squareBurger)
-    let ncost = CalculateCost(500000,squareBurger+1)
+    let cost = CalculateCost(25000,squareBurger)
+    let ncost = CalculateCost(25000,squareBurger+1)
     if(Burgers >= cost)
     {
         Burgers -= cost;
