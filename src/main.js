@@ -20,11 +20,12 @@ function Update_BurgerCounter()
 //Update function (60 times per second)
 function Step()
 {
+    UpdateInstructions();
     document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
     var adburger = 0
     adburger += employees;
     adburger += microwaves*(5+employees/5);
-    adburger += factories*(150*employees/20)
+    adburger += factories*(150*employees/15)
     adburger += burgerFabricator*(1000+(factories*50));
     BPS = Math.round(adburger*10)/10;
     adburger/=60;

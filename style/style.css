@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #171621;
+  background-color: #100f1a;
   color: white;
   font-family: Font;
 }
@@ -14,6 +14,37 @@ img {
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
   }
+#InfoDropdown
+{
+  width: 20%;
+  font-size: 24px;
+  font-family: Font;
+  background-color: #171621;
+  color: #ffffff;
+  position: absolute;
+  top: 100%;
+  left:25%;
+  border-radius: 16px;
+}
+#InfoDesription
+{
+  font-size: 18px;
+  font-family: Font;
+  color:#ffffff;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+}
+#InfoBox
+{
+  background-color: #171621;
+  position: absolute;
+  top: 110%;
+  left: 25%;
+  width: 50%;
+  height: 25%;
+  border-radius: 24px;
+}
 #Burger{
   position: absolute;
   margin-left: auto;
