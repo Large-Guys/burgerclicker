@@ -1,3 +1,4 @@
+console.log("V 0.1.0")
 var Burgers = 0;
 const burger = document.getElementById("Burger")
 
