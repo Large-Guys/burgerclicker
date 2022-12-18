@@ -81,5 +81,11 @@ function Step1()
     let ncost = CalculateCost(25,employees)
     document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
 }
+
+//Load Save from local storage if it exists.
+if(localStorage.getItem('save')){
+    ImportSave(localStorage.getItem('save'))
+}
+
 setInterval(Step, 16);
 setInterval(Step1,5000);

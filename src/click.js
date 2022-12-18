@@ -55,20 +55,6 @@ function OnClick_Employee()
         Update_Text();
     }
 }
-function OnClick_Save()
-{
-    if(document.getElementById("SaveInput").value != "")
-    {
-        ImportSave(document.getElementById("SaveInput").value);
-        document.getElementById("SaveInput").value = "";
-    }
-    else
-    {
-        document.getElementById("SaveInput").value = GenerateSave();
-        document.getElementById("SaveInput").select();
-        var ok = document.execCommand('copy');
-    }
-}
 function OnClick_Microwave()
 {
     let cost = CalculateCost(250,microwaves)

@@ -6,6 +6,7 @@ function GenerateSave()
         let c = str.charCodeAt(index);
         encodedstr += String.fromCharCode(c+17);
     }
+    localStorage.setItem('save', encodedstr);
     return encodedstr;
 }
 function ImportSave(save)
