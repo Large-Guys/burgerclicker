@@ -26,7 +26,7 @@ function OnClick_SquareBurger()
         Burgers -= cost;
         squareBurger += 1;
         Update_BurgerCounter();
-        document.getElementById("SquareBurgerCounter").innerHTML = ncost + "B " + squareBurger + " Square Burgers";
+        Update_Text();
     }
 }
 function OnClick_BurgerGun()
@@ -39,7 +39,7 @@ function OnClick_BurgerGun()
         Burgers -= cost;
         burgerGun += 1;
         Update_BurgerCounter();
-        document.getElementById("BurgerGunCounter").innerHTML = ncost + "B " + burgerGun + " Burger Gun";
+        Update_Text();
     }
 }
 function OnClick_Employee()
@@ -52,7 +52,19 @@ function OnClick_Employee()
         Burgers -= cost;
         employees += 1;
         Update_BurgerCounter();
-        document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
+        Update_Text();
+    }
+}
+function OnClick_Save()
+{
+    if(document.getElementById("SaveInput").value != "")
+    {
+        ImportSave(document.getElementById("SaveInput").value);
+        document.getElementById("SaveInput").value = "";
+    }
+    else
+    {
+        document.getElementById("SaveInput").value = GenerateSave();
     }
 }
 function OnClick_Microwave()
@@ -65,7 +77,7 @@ function OnClick_Microwave()
         Burgers -= cost;
         microwaves += 1;
         Update_BurgerCounter();
-        document.getElementById("MicrowaveCounter").innerHTML = ncost + "B " + microwaves + " Microwaves";
+        Update_Text();
     }
 }
 function OnClick_Factory()
@@ -78,7 +90,7 @@ function OnClick_Factory()
         Burgers -= cost;
         factories += 1;
         Update_BurgerCounter();
-        document.getElementById("FactoryCounter").innerHTML = ncost + "B " + factories + " Factories";
+        Update_Text();
     }
 }
 function OnClick_BonusBurger()
@@ -90,7 +102,7 @@ function OnClick_BonusBurger()
         Burgers -= cost;
         bonusBurgers += 1;
         Update_BurgerCounter();
-        document.getElementById("BurgerBurgerCounter").innerHTML = ncost + "B " + bonusBurgers + " Bonus Burgers";
+        Update_Text();    
     }
 }
 function OnClick_BurgerFabricator()
@@ -103,6 +115,6 @@ function OnClick_BurgerFabricator()
         Burgers -= cost;
         burgerFabricator += 1;
         Update_BurgerCounter();
-        document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "B " + burgerFabricator + " Burger Fabricators";
+        Update_Text();
     }
 }

@@ -17,6 +17,27 @@ var sfx_factory = new Audio("sfx/Factory.wav")
 var sfx_microwave = new Audio("sfx/microwave.wav")
 var sfx_fabricator = new Audio("sfx/Fabricator.wav")
 
+function Update_Text()
+{
+    document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
+    document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
+    let ncost = CalculateCost(25000,squareBurger)
+    document.getElementById("SquareBurgerCounter").innerHTML = ncost + "B " + squareBurger + " Square Burgers";
+    ncost = CalculateCost(50000,burgerGun)
+    document.getElementById("BurgerGunCounter").innerHTML = ncost + "B " + burgerGun + " Burger Gun";
+    ncost = CalculateCost(25,employees)
+    document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
+    ncost = CalculateCost(250,microwaves)
+    document.getElementById("MicrowaveCounter").innerHTML = ncost + "B " + microwaves + " Microwaves";
+    ncost = CalculateCost(1250,factories)
+    document.getElementById("FactoryCounter").innerHTML = ncost + "B " + factories + " Factories";
+    ncost = CalculateCost(50,bonusBurgers)
+    document.getElementById("BurgerBurgerCounter").innerHTML = ncost + "B " + bonusBurgers + " Bonus Burgers";
+    ncost = CalculateCost(10000,burgerFabricator);
+    document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "B " + burgerFabricator + " Burger Fabricators";
+}
+
+
 function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings*0.85)))
