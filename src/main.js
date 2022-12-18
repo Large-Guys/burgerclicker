@@ -9,12 +9,12 @@ var bonusBurgers = 0
 var burgerFabricator = 0
 var squareBurger = 0
 var burgerGun = 0
-var sfx_click = new Audio("../sfx/click.wav")
-var sfx_scream = new Audio("../sfx/BurgerGuyScreamB.wav")
-var sfx_shoot = new Audio("../sfx/shoot.wav")
-var sfx_factory = new Audio("../sfx/Factory.wav")
-var sfx_microwave = new Audio("../sfx/microwave.wav")
-var sfx_fabricator = new Audio("../sfx/Fabricator.wav")
+var sfx_click = new Audio("sfx/click.wav")
+var sfx_scream = new Audio("sfx/BurgerGuyScreamB.wav")
+var sfx_shoot = new Audio("sfx/shoot.wav")
+var sfx_factory = new Audio("sfx/Factory.wav")
+var sfx_microwave = new Audio("sfx/microwave.wav")
+var sfx_fabricator = new Audio("sfx/Fabricator.wav")
 
 function CalculateCost(basecost,numberOfBuildings)
 {
