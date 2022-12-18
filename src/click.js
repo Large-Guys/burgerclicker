@@ -65,6 +65,7 @@ function OnClick_Save()
     else
     {
         document.getElementById("SaveInput").value = GenerateSave();
+        document.getElementById("SaveInput").select();
     }
 }
 function OnClick_Microwave()
