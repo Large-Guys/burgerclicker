@@ -8,7 +8,7 @@ function playSound(sfx)
 function CalculateBurgersPerClick()
 {
     let adburgers = 1*(bonusBurgers+1);
-    adburgers *= squareBurger+1;
+    adburgers *= squareBurger*squareBurger+1;
     return adburgers;
 }
 function OnClick_Burger()
