@@ -31,11 +31,11 @@ function OnClick_SquareBurger()
 }
 function OnClick_BurgerGun()
 {
-    playSound(sfx_shoot)
     let cost = CalculateCost(50000,burgerGun)
     let ncost = CalculateCost(50000,burgerGun+1)
     if(Burgers >= cost)
     {
+        playSound(sfx_shoot)
         Burgers -= cost;
         burgerGun += 1;
         Update_BurgerCounter();
@@ -44,11 +44,11 @@ function OnClick_BurgerGun()
 }
 function OnClick_Employee()
 {
-    playSound(sfx_scream)
     let cost = CalculateCost(25,employees)
     let ncost = CalculateCost(25,employees+1)
     if(Burgers >= cost)
     {
+        playSound(sfx_scream)
         Burgers -= cost;
         employees += 1;
         Update_BurgerCounter();
@@ -57,11 +57,11 @@ function OnClick_Employee()
 }
 function OnClick_Microwave()
 {
-    playSound(sfx_microwave)
     let cost = CalculateCost(250,microwaves)
     let ncost = CalculateCost(250,microwaves+1)
     if(Burgers >= cost)
     {
+        playSound(sfx_microwave)
         Burgers -= cost;
         microwaves += 1;
         Update_BurgerCounter();
@@ -70,11 +70,11 @@ function OnClick_Microwave()
 }
 function OnClick_Factory()
 {
-    playSound(sfx_factory)
     let cost = CalculateCost(1250,factories)
     let ncost = CalculateCost(1250,factories+1)
     if(Burgers >= cost)
     {
+        playSound(sfx_factory)
         Burgers -= cost;
         factories += 1;
         Update_BurgerCounter();
@@ -95,11 +95,11 @@ function OnClick_BonusBurger()
 }
 function OnClick_BurgerFabricator()
 {
-    playSound(sfx_fabricator)
     let cost = CalculateCost(10000, burgerFabricator);
     let ncost = CalculateCost(10000,burgerFabricator+1);
     if(Burgers > cost)
     {
+        playSound(sfx_fabricator)
         Burgers -= cost;
         burgerFabricator += 1;
         Update_BurgerCounter();
