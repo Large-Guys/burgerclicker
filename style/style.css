@@ -8,7 +8,7 @@ body {
   font-family: Font;
 }
 
-@font-face { font-family: Font; src: url('../Bigboy.ttf'); } 
+@font-face { font-family: Font; src: url('../cmunvi.ttf'); } 
 img {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
