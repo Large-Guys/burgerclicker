@@ -156,6 +156,51 @@ img {
     
 }
 
+@keyframes spin
+{
+  0% {
+    transform: scale(0.75) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+  }
+  100% {
+    transform: scale(0.75) rotate(360deg);
+  }
+}
+
+@keyframes spinOffseted
+{
+  0% {
+    transform: scale(1.5) rotate(45deg);
+  }
+  50% {
+    transform: scale(0.75) rotate(225deg);
+  }
+  100% {
+    transform: scale(1.5) rotate(405deg);
+  }
+}
+
+#BurgerLight
+{
+  position: absolute;
+  width:20%;
+  left:57.5%;
+  top:22.5%;
+  color: #ffffff;
+  animation: spin 8s infinite linear;
+}
+#BurgerLightOffseted
+{
+  position: absolute;
+  width:20%;
+  left:57.5%;
+  top:22.5%;
+  color: #ffffff;
+  animation: spinOffseted 8s infinite linear;
+}
+
 #bps {
   font-size: 32px;
   position:absolute;
