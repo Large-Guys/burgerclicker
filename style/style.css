@@ -49,7 +49,7 @@ img {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: 75%;
+  left: 35%;
   right: 0;
   text-align: center;
   width: 5%;
@@ -62,10 +62,13 @@ img {
   top:2.5%;
   transition: width 0.3s;
 }
+.Counter
+{
+  width: 45%;
+  left: 10%;
+}
 #EmployeeCounter{
   position:absolute;
-  width: 70%;
-  left: 15%;
   top:2.5%;
   text-align: center;
   font-size: 48px;
@@ -73,8 +76,6 @@ img {
 }
 #BurgerGunCounter{
   position:absolute;
-  width: 70%;
-  left: 15%;
   top:92.5%;
   text-align: center;
   font-size: 48px;
@@ -82,8 +83,6 @@ img {
 }
 #SquareBurgerCounter{
   position:absolute;
-  width: 70%;
-  left: 15%;
   top:77.5%;
   text-align: center;
   font-size: 48px;
@@ -92,8 +91,6 @@ img {
 #BurgerFabricatorCounter
 {
   position:absolute;
-  width: 70%;
-  left: 15%;
   top:62.5%;
   text-align: center;
   font-size: 48px;
@@ -101,8 +98,6 @@ img {
 }
 #MicrowaveCounter{
   position:absolute;
-  width: 70%;
-  left: 15%;
   top:17.5%;
   text-align: center;
   font-size: 48px;
@@ -110,8 +105,6 @@ img {
 }
 #BurgerBurgerCounter{
   position:absolute;
-  width: 70%;
-  left: 15%;
   top:47.5%;
   text-align: center;
   font-size: 48px;
@@ -119,8 +112,6 @@ img {
 }
 #FactoryCounter{
   position:absolute;
-  width: 70%;
-  left: 15%;
   top:32.5%;
   text-align: center;
   font-size: 48px;
@@ -131,7 +122,7 @@ img {
   font-size: 64px;
   position:absolute;
   width: 45.3%;
-  left: 64%;
+  left: 45%;
   top:22%;
   text-align: center;
     
@@ -169,7 +160,7 @@ img {
   font-size: 32px;
   position:absolute;
   width: 20%;
-  left: 77.5%;
+  left: 57.5%;
   top:33%;
   text-align: center;
 }

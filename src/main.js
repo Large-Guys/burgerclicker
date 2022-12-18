@@ -37,12 +37,15 @@ function Step()
 }
 function Step1()
 {
-    if(employees > 10)
+    for (let i = 0; i < burgerGun; i++) 
     {
-        employees -= 1;
-        Burgers += 10000;
+        if(employees > 10)
+        {
+            employees -= 1;
+            Burgers += 10000;
+        }
     }
-    let ncost = CalculateCost(25,employees+1)
+    let ncost = CalculateCost(25,employees)
     document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
 }
 setInterval(Step, 16);
