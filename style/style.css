@@ -4,7 +4,7 @@
 
 body {
   background-color: #100f1a;
-  color: white;
+  color: #d37b86;
   font-family: Font;
 }
 
@@ -46,6 +46,7 @@ img {
   border-radius: 24px;
 }
 #Burger{
+  filter: drop-shadow(0 0 2rem rgb(255, 255, 255));
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -159,31 +160,32 @@ img {
 @keyframes spin
 {
   0% {
-    transform: scale(0.75) rotate(0deg);
+    transform: scale(0.5) rotate(0deg);
   }
   50% {
-    transform: scale(1.5) rotate(180deg);
+    transform: scale(1) rotate(180deg);
   }
   100% {
-    transform: scale(0.75) rotate(360deg);
+    transform: scale(0.5) rotate(360deg);
   }
 }
 
 @keyframes spinOffseted
 {
   0% {
-    transform: scale(1.5) rotate(45deg);
+    transform: scale(1) rotate(45deg);
   }
   50% {
-    transform: scale(0.75) rotate(225deg);
+    transform: scale(0.5) rotate(225deg);
   }
   100% {
-    transform: scale(1.5) rotate(405deg);
+    transform: scale(1) rotate(405deg);
   }
 }
 
 #BurgerLight
 {
+  filter: drop-shadow(0 0 2rem rgb(255, 255, 255));
   position: absolute;
   width:20%;
   left:57.5%;
@@ -193,6 +195,7 @@ img {
 }
 #BurgerLightOffseted
 {
+  filter: drop-shadow(0 0 2rem rgb(255, 255, 255));
   position: absolute;
   width:20%;
   left:57.5%;
