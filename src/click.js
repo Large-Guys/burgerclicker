@@ -21,6 +21,18 @@ function OnClick_SquareBurger()
         document.getElementById("SquareBurgerCounter").innerHTML = ncost + "B " + squareBurger + " Square Burgers";
     }
 }
+function OnClick_BurgerGun()
+{
+    let cost = CalculateCost(50000,burgerGun)
+    let ncost = CalculateCost(50000,burgerGun+1)
+    if(Burgers >= cost)
+    {
+        Burgers -= cost;
+        burgerGun += 1;
+        Update_BurgerCounter();
+        document.getElementById("BurgerGunCounter").innerHTML = ncost + "B " + burgerGun + " Burger Gun";
+    }
+}
 function OnClick_Employee()
 {
     let cost = CalculateCost(25,employees)

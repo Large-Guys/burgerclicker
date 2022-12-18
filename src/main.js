@@ -8,6 +8,8 @@ var factories = 0
 var bonusBurgers = 0
 var burgerFabricator = 0
 var squareBurger = 0
+var burgerGun = 0
+
 function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings*0.85)))
@@ -33,4 +35,15 @@ function Step()
     GenerateSave();
     document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
 }
+function Step1()
+{
+    if(employees > 10)
+    {
+        employees -= 1;
+        Burgers += 10000;
+    }
+    let ncost = CalculateCost(25,employees+1)
+    document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
+}
 setInterval(Step, 16);
+setInterval(Step1,5000);

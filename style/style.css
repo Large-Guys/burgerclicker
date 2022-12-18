@@ -22,7 +22,7 @@ img {
   background-color: #171621;
   color: #ffffff;
   position: absolute;
-  top: 100%;
+  top: 115%;
   left:25%;
   border-radius: 16px;
 }
@@ -39,10 +39,10 @@ img {
 {
   background-color: #171621;
   position: absolute;
-  top: 110%;
+  top: 125%;
   left: 25%;
   width: 50%;
-  height: 25%;
+  height: 40%;
   border-radius: 24px;
 }
 #Burger{
@@ -67,6 +67,15 @@ img {
   width: 70%;
   left: 15%;
   top:2.5%;
+  text-align: center;
+  font-size: 48px;
+  
+}
+#BurgerGunCounter{
+  position:absolute;
+  width: 70%;
+  left: 15%;
+  top:92.5%;
   text-align: center;
   font-size: 48px;
   
