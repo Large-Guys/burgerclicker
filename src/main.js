@@ -1,4 +1,4 @@
-console.log("V 0.1.0")
+console.log("V 0.1.8")
 var Burgers = 0;
 const burger = document.getElementById("Burger")
 
@@ -17,30 +17,35 @@ var sfx_factory = new Audio("sfx/Factory.wav")
 var sfx_microwave = new Audio("sfx/microwave.wav")
 var sfx_fabricator = new Audio("sfx/Fabricator.wav")
 
+function SimplifyNumber(number)
+{
+    return number.toLocaleString();
+}
+
 function Update_Text()
 {
-    document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
+    document.getElementById("BurgerTextCounter").innerHTML = SimplifyNumber(Math.floor(Burgers)) + " Burgers";
     document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
     let ncost = CalculateCost(25000,squareBurger)
-    document.getElementById("SquareBurgerCounter").innerHTML = ncost + "B " + squareBurger + " Square Burgers";
+    document.getElementById("SquareBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + squareBurger + " Square Burgers";
     ncost = CalculateCost(50000,burgerGun)
-    document.getElementById("BurgerGunCounter").innerHTML = ncost + "B " + burgerGun + " Burger Gun";
+    document.getElementById("BurgerGunCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerGun + " Burger Gun";
     ncost = CalculateCost(25,employees)
-    document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
+    document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
     ncost = CalculateCost(250,microwaves)
-    document.getElementById("MicrowaveCounter").innerHTML = ncost + "B " + microwaves + " Microwaves";
+    document.getElementById("MicrowaveCounter").innerHTML = SimplifyNumber(ncost) + "B " + microwaves + " Microwaves";
     ncost = CalculateCost(1250,factories)
-    document.getElementById("FactoryCounter").innerHTML = ncost + "B " + factories + " Factories";
+    document.getElementById("FactoryCounter").innerHTML = SimplifyNumber(ncost) + "B " + factories + " Factories";
     ncost = CalculateCost(50,bonusBurgers)
-    document.getElementById("BurgerBurgerCounter").innerHTML = ncost + "B " + bonusBurgers + " Bonus Burgers";
+    document.getElementById("BurgerBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
     ncost = CalculateCost(10000,burgerFabricator);
-    document.getElementById("BurgerFabricatorCounter").innerHTML = ncost + "B " + burgerFabricator + " Burger Fabricators";
+    document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
 }
 
 
 function CalculateCost(basecost,numberOfBuildings)
 {
-    return Math.floor(basecost*(1+(numberOfBuildings*0.85)))
+    return Math.floor(basecost*(1+(numberOfBuildings*1.15)))
 }
 function Update_BurgerCounter()
 {
@@ -51,7 +56,7 @@ function Update_BurgerCounter()
 function Step()
 {
     UpdateInstructions();
-    document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
+    Update_Text()
     let adburger = 0
     adburger += employees;
     adburger += microwaves*(5+employees/5);
