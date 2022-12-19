@@ -106,3 +106,11 @@ function OnClick_BurgerFabricator()
         Update_Text();
     }
 }
+
+function help(){
+    document.getElementById('help').style.display = 'block';
+}
+
+function closeHelp(){
+    document.getElementById('help').style.display = 'none';
+}
