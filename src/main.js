@@ -42,14 +42,19 @@ function Update_Text()
     document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
 }
 
+function DeleteSave()
+{
+    //if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
+}
 
 function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings*1.15)))
 }
-function Update_BurgerCounter()
+
+function DeleteSave()
 {
-    document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
+    //if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
 }
 
 //Update function (60 times per second)
@@ -66,7 +71,7 @@ function Step()
     adburger/=60;
     Burgers += adburger;
     GenerateSave();
-    document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
+    document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC`;
 }
 function Step1()
 {
@@ -79,7 +84,7 @@ function Step1()
         }
     }
     let ncost = CalculateCost(25,employees)
-    document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
+    document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
 }
 
 //Load Save from local storage if it exists.

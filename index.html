@@ -51,56 +51,30 @@
         <h1 id="BurgerTextCounter">0 Burgers</h1>
         <h2 id="bps">bps</h2>
         <img src="art/Burger.png" id="Burger" class="ScaleButton" onclick="OnClick_Burger()">
-    </div>
-    <div id="help">
-        <button onclick="closeHelp()">✕</button>
-        <div id="Info">
-            <select name="Info" id="InfoDropdown">
-                <option id="InfoSub"
-                    value="Burger clicker is a game where you click burgers. This is a quick start guide. First, click the burger 25 times, that way you will be able to afford an employee. Click the employee to purchase them. That's basically the entire game! Click the burger some more and buy other products. Hints/Instructions for each object can be found in the dropdown above.">
-                    Burger Clicker</option>
-                <option id="InfoSub" value="BPS is the number of burgers you produce per second. (Burgers per second)">
-                    BPS
-                </option>
-                <option id="InfoSub" value="BPC is the number of burgers you produce per click. (Burgers per click)">BPC
-                </option>
-                <option id="InfoSub"
-                    value="B stands for burgers. So 1000B means 1000 Burgers, not 1000 billion. (Which if it were in the billions, it would be written as 1000 billion)">
-                    B</option>
-                <option id="InfoSub"
-                    value="Employees only produce a mere 1 burger per second but they boost most other products including: microwaves, and factories.">
-                    Employee</option>
-                <option id="InfoSub"
-                    value="Microwaves by default only produce 5 burgers per second, but employees effect these the most. Due to the need for someone to actually place the burgers into the microwaves. Although these are somewhat autonomous.">
-                    Microwaves</option>
-                <option id="InfoSub"
-                    value="Factories are not as affected by employees as microwaves are, but they do NEED employees to run. It will run at max efficency, producing 150 burgers every second, once you get 15 employees.">
-                    Factories</option>
-                <option id="InfoSub"
-                    value="Burger fabricators do not require anything to run. However, they are boosted by factories and not employees.">
-                    Burger Fabricators</option>
-                <option id="InfoSub" value="Bonus burgers increase the number of burgers you recieve per click.">Bonus
-                    Burgers
-                </option>
-                <option id="InfoSub" value="Square burgers multiply the number of burgers you get per click.">Square
-                    Burgers
-                </option>
-                <option id="InfoSub"
-                    value="The burger gun shoots 1 employee every 5 seconds turning them into 10000 burgers. It will stop at 10 employees.">
-                    Burger Gun</option>
-            </select>
-            <div id="InfoBox">
-                <p id="InfoDesription">
 
-                </p>
-            </div>
+        
+        <select name="Info" id="InfoDropdown">
+            <option id="InfoSub" value="Burger clicker is a game where you click burgers. This is a quick start guide. First, click the burger 25 times, that way you will be able to afford an employee. Click the employee to purchase them. That's basically the entire game! Click the burger some more and buy other products. Hints/Instructions for each object can be found in the dropdown above.">Burger Clicker</option>
+            <option id="InfoSub" value="BPS is the number of burgers you produce per second. (Burgers per second)">BPS</option>
+            <option id="InfoSub" value="BPC is the number of burgers you produce per click. (Burgers per click)">BPC</option>
+            <option id="InfoSub" value="B stands for burgers. So 1000B means 1000 Burgers, not 1000 billion. (Which if it were in the billions, it would be written as 1000 billion)">B</option>
+            <option id="InfoSub" value="Employees only produce a mere 1 burger per second but they boost most other products including: microwaves, and factories.">Employee</option>
+            <option id="InfoSub" value="Microwaves by default only produce 5 burgers per second, but employees effect these the most. Due to the need for someone to actually place the burgers into the microwaves. Although these are somewhat autonomous.">Microwaves</option>
+            <option id="InfoSub" value="Factories are not as affected by employees as microwaves are, but they do NEED employees to run. It will run at max efficency, producing 150 burgers every second, once you get 15 employees.">Factories</option>
+            <option id="InfoSub" value="Burger fabricators do not require anything to run. However, they are boosted by factories and not employees.">Burger Fabricators</option>
+            <option id="InfoSub" value="Bonus burgers increase the number of burgers you recieve per click.">Bonus Burgers</option>
+            <option id="InfoSub" value="Square burgers multiply the number of burgers you get per click.">Square Burgers</option>
+            <option id="InfoSub" value="The burger gun shoots 1 employee every 5 seconds turning them into 10000 burgers. It will stop at 10 employees.">Burger Gun</option>
+        </select>
+        <div id="InfoBox">
+            <p id="InfoDesription">
+                
+            </p>
         </div>
-    </div>
 
-    <script src="src/click.js"></script>
-    <script src="src/save.js"></script>
-    <script src="src/instructions.js"></script>
-    <script src="src/main.js"></script>
-</body>
-
+        <script src="src/click.js"></script>
+        <script src="src/save.js"></script>
+        <script src="src/instructions.js"></script>
+        <script src="src/main.js"></script>
+    </body>
 </html>
