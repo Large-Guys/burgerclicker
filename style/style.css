@@ -26,9 +26,14 @@ img {
 
 #help button {
   position: absolute;
-  top: 115%;
-  left:25%;
-  border-radius: 16px;
+  top: 5px;
+  right: 5px;
+  font-size: 40px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 #Info {
