@@ -44,7 +44,18 @@ function Update_Text()
 
 function DeleteSave()
 {
-    //if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
+    if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
+    {
+        Burgers = 0
+        employees = 0
+        microwaves = 0
+        factories = 0
+        burgerFabricator = 0
+        bonusBurgers = 0
+        squareBurger = 0
+        burgerGun = 0
+        GenerateSave();
+    }
 }
 
 function CalculateCost(basecost,numberOfBuildings)
@@ -65,11 +76,11 @@ function Step()
     BPS = Math.round(adburger*10)/10;
     adburger/=60;
     Burgers += adburger;
-    GenerateSave();
     document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC`;
 }
 function Step1()
 {
+    GenerateSave();
     for (let i = 0; i < burgerGun; i++) 
     {
         if(employees > 10)
