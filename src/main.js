@@ -47,10 +47,6 @@ function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings*1.15)))
 }
-function Update_BurgerCounter()
-{
-    document.getElementById("BurgerTextCounter").innerHTML = Math.floor(Burgers) + " Burgers";
-}
 
 //Update function (60 times per second)
 function Step()
@@ -66,7 +62,7 @@ function Step()
     adburger/=60;
     Burgers += adburger;
     GenerateSave();
-    document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
+    document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC`;
 }
 function Step1()
 {
@@ -79,7 +75,7 @@ function Step1()
         }
     }
     let ncost = CalculateCost(25,employees)
-    document.getElementById("EmployeeCounter").innerHTML = ncost + "B " + employees + " Employees";
+    document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
 }
 setInterval(Step, 16);
 setInterval(Step1,5000);
