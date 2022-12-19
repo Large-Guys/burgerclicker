@@ -50,9 +50,11 @@ function CalculateCost(basecost,numberOfBuildings)
 function DeleteSave()
 {
     if(confirm('Are you sure you want to delete your save?')){
-        clearInterval(refresh);
-        localStorage.clear();
-        window.location.refresh();
+        if(confirm('Are you really sure though?')){
+            clearInterval(refresh);
+            localStorage.clear();
+            window.location.reload();
+        }
     }
 }
 
