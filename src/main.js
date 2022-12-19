@@ -42,11 +42,6 @@ function Update_Text()
     document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
 }
 
-function DeleteSave()
-{
-    //if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
-}
-
 function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings*1.15)))
