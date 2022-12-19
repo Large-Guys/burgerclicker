@@ -44,23 +44,23 @@ function Update_Text()
 
 function DeleteSave()
 {
-    if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
-    {
-        Burgers = 0
-        employees = 0
-        microwaves = 0
-        factories = 0
-        burgerFabricator = 0
-        bonusBurgers = 0
-        squareBurger = 0
-        burgerGun = 0
-        GenerateSave();
-    }
+    //if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
 }
 
 function CalculateCost(basecost,numberOfBuildings)
 {
     return Math.floor(basecost*(1+(numberOfBuildings*1.15)))
+}
+
+function DeleteSave()
+{
+    if(confirm('Are you sure you want to delete your save?')){
+        if(confirm('Are you really sure though?')){
+            clearInterval(refresh);
+            localStorage.clear();
+            window.location.reload();
+        }
+    }
 }
 
 //Update function (60 times per second)
@@ -98,5 +98,5 @@ if(localStorage.getItem('save')){
     ImportSave(localStorage.getItem('save'))
 }
 
-setInterval(Step, 16);
+let refresh = setInterval(Step, 16);
 setInterval(Step1,5000);
