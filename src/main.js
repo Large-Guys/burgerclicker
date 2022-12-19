@@ -49,7 +49,11 @@ function CalculateCost(basecost,numberOfBuildings)
 
 function DeleteSave()
 {
-    //if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
+    if(confirm('Are you sure you want to delete your save?')){
+        clearInterval(refresh);
+        localStorage.clear();
+        window.location.refresh();
+    }
 }
 
 //Update function (60 times per second)
@@ -87,5 +91,5 @@ if(localStorage.getItem('save')){
     ImportSave(localStorage.getItem('save'))
 }
 
-setInterval(Step, 16);
+let refresh = setInterval(Step, 16);
 setInterval(Step1,5000);
