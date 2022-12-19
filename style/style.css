@@ -214,6 +214,19 @@ img {
 #buildings h1 {
   padding-left: 40px;
   padding-top: 20px;
+  display: inline;
+}
+
+#buildings select {
+  font-size: 15px;
+  background-color: #2e2e32;
+  color: #dfdfdf;
+  padding: 2px;
+  border: 2px solid #dfdfdf;
+  border-radius: 16px;
+  margin-top: 10px;
+  float: right;
+  margin-right: 10px;
 }
 
 #buildings ul li {
