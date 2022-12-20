@@ -51,7 +51,7 @@ function CalculateCost(basecost,numberOfBuildings,number=1)
 {
     let n = 0;
     for (let i = 0; i < number; i++) {
-        n+=Math.floor(basecost*(1+((numberOfBuildings+i)*1.15)))
+        n+=Math.floor(basecost*(1+((numberOfBuildings+i)*1.35)))
     }
     return n;
 }
