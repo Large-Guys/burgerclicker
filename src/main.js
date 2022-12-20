@@ -76,7 +76,7 @@ function Step()
     adburger += factories*(150*employees/15)
     adburger += burgerFabricator*(1000+(factories*50));
     adburger += burgerGun*(5000);
-    adburger += burgerBot*13503.9;
+    adburger += burgerBot*(13503.9*10);
     BPS = Math.round(adburger*10)/10;
     adburger/=60;
     Burgers += adburger;
