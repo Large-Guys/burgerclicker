@@ -60,9 +60,7 @@ function DeleteSave()
 {
     if(confirm('Are you sure you want to delete your save?')){
         if(confirm('Are you really sure though?')){
-            clearInterval(refresh);
-            localStorage.clear();
-            window.location.reload();
+            ImportSave("AKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAK")
         }
     }
 }
