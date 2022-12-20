@@ -29,6 +29,7 @@ function OnClick_SquareBurger() {
 }
 function OnClick_BurgerGun() {
     let x = Number(document.getElementById('selectNum').value);
+    let played_sound = false
     for (let i = 0; i < x; i++) {
         let cost = CalculateCost(50000, burgerGun)
         let ncost = CalculateCost(50000, burgerGun + 1)
@@ -50,6 +51,20 @@ function OnClick_Employee() {
             playSound(sfx_scream)
             Burgers -= cost;
             employees += 1;
+            
+            Update_Text();
+        }
+    }
+}
+function OnClick_BurgerBot() {
+    let x = Number(document.getElementById('selectNum').value);
+    for (let i = 0; i < x; i++) {
+        let cost = CalculateCost(1000000, burgerBot)
+        let ncost = CalculateCost(1000000, burgerBot + 1)
+        if (Burgers >= cost) {
+            playSound(sfx_bot)
+            Burgers -= cost;
+            burgerBot += 1;
             
             Update_Text();
         }

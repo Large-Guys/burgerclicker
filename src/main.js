@@ -10,8 +10,10 @@ var bonusBurgers = 0
 var burgerFabricator = 0
 var squareBurger = 0
 var burgerGun = 0
+var burgerBot = 0
 var sfx_click = new Audio("sfx/click.wav")
 var sfx_scream = new Audio("sfx/BurgerGuyScreamB.wav")
+var sfx_bot = new Audio("sfx/BurgerBot.wav")
 var sfx_shoot = new Audio("sfx/shoot.wav")
 var sfx_factory = new Audio("sfx/Factory.wav")
 var sfx_microwave = new Audio("sfx/microwave.wav")
@@ -30,7 +32,7 @@ function Update_Text()
     let ncost = CalculateCost(25000,squareBurger,x)
     document.getElementById("SquareBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + squareBurger + " Square Burgers";
     ncost = CalculateCost(50000,burgerGun,x)
-    document.getElementById("BurgerGunCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerGun + " Burger Gun";
+    document.getElementById("BurgerGunCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerGun + " Burger Guns";
     ncost = CalculateCost(25,employees,x)
     document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
     ncost = CalculateCost(250,microwaves,x)
@@ -41,6 +43,8 @@ function Update_Text()
     document.getElementById("BurgerBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
     ncost = CalculateCost(10000,burgerFabricator,x);
     document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
+    ncost = CalculateCost(1000000,burgerBot,x);
+    document.getElementById("BurgerBotCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerBot + " Burger Bots";
 }
 
 function CalculateCost(basecost,numberOfBuildings,number=1)
@@ -73,6 +77,8 @@ function Step()
     adburger += microwaves*(5+employees/5);
     adburger += factories*(150*employees/15)
     adburger += burgerFabricator*(1000+(factories*50));
+    adburger += burgerGun*(5000);
+    adburger += burgerBot*13503.9;
     BPS = Math.round(adburger*10)/10;
     adburger/=60;
     Burgers += adburger;
@@ -81,16 +87,6 @@ function Step()
 function Step1()
 {
     GenerateSave();
-    for (let i = 0; i < burgerGun; i++) 
-    {
-        if(employees > 10)
-        {
-            employees -= 1;
-            Burgers += 10000;
-        }
-    }
-    let ncost = CalculateCost(25,employees)
-    document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
 }
 
 //Load Save from local storage if it exists.
