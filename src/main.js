@@ -43,7 +43,7 @@ function Update_Text()
     document.getElementById("BurgerBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
     ncost = CalculateCost(10000,burgerFabricator,x);
     document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
-    ncost = CalculateCost(1000000,burgerBot,x);
+    ncost = CalculateCost(250000,burgerBot,x);
     document.getElementById("BurgerBotCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerBot + " Burger Bots";
 }
 
