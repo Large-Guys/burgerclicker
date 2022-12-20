@@ -4,7 +4,7 @@
 
 body {
   background-color: #100f1a;
-  color: #e06b51;
+  color: #ffffff;
   font-family: Font;
   height: 100vh;
   width: 100vw;
@@ -16,6 +16,15 @@ body {
 @font-face {
   font-family: Font;
   src: url('../cmunvi.ttf');
+}
+
+button
+{
+  font-family: Font;
+}
+
+select{
+  font-family: Font;
 }
 
 img {

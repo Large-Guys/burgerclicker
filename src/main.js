@@ -24,32 +24,32 @@ function SimplifyNumber(number)
 
 function Update_Text()
 {
+    let x = Number(document.getElementById('selectNum').value);
     document.getElementById("BurgerTextCounter").innerHTML = SimplifyNumber(Math.floor(Burgers)) + " Burgers";
     document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
-    let ncost = CalculateCost(25000,squareBurger)
+    let ncost = CalculateCost(25000,squareBurger,x)
     document.getElementById("SquareBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + squareBurger + " Square Burgers";
-    ncost = CalculateCost(50000,burgerGun)
+    ncost = CalculateCost(50000,burgerGun,x)
     document.getElementById("BurgerGunCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerGun + " Burger Gun";
-    ncost = CalculateCost(25,employees)
+    ncost = CalculateCost(25,employees,x)
     document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
-    ncost = CalculateCost(250,microwaves)
+    ncost = CalculateCost(250,microwaves,x)
     document.getElementById("MicrowaveCounter").innerHTML = SimplifyNumber(ncost) + "B " + microwaves + " Microwaves";
-    ncost = CalculateCost(1250,factories)
+    ncost = CalculateCost(1250,factories,x)
     document.getElementById("FactoryCounter").innerHTML = SimplifyNumber(ncost) + "B " + factories + " Factories";
-    ncost = CalculateCost(50,bonusBurgers)
+    ncost = CalculateCost(50,bonusBurgers,x)
     document.getElementById("BurgerBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
-    ncost = CalculateCost(10000,burgerFabricator);
+    ncost = CalculateCost(10000,burgerFabricator,x);
     document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
 }
 
-function DeleteSave()
+function CalculateCost(basecost,numberOfBuildings,number=1)
 {
-    //if(prompt("ARE YOU SURE (type yes or no)","no")=="yes")
-}
-
-function CalculateCost(basecost,numberOfBuildings)
-{
-    return Math.floor(basecost*(1+(numberOfBuildings*1.15)))
+    let n = 0;
+    for (let i = 0; i < number; i++) {
+        n+=Math.floor(basecost*(1+((numberOfBuildings+i)*1.15)))
+    }
+    return n;
 }
 
 function DeleteSave()
