@@ -59,8 +59,8 @@ function OnClick_Employee() {
 function OnClick_BurgerBot() {
     let x = Number(document.getElementById('selectNum').value);
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(1000000, burgerBot)
-        let ncost = CalculateCost(1000000, burgerBot + 1)
+        let cost = CalculateCost(250000, burgerBot)
+        let ncost = CalculateCost(250000, burgerBot + 1)
         if (Burgers >= cost) {
             playSound(sfx_bot)
             Burgers -= cost;
