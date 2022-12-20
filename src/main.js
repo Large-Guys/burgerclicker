@@ -68,6 +68,7 @@ function DeleteSave()
 //Update function (60 times per second)
 function Step()
 {
+    UpdatePedestrians();
     UpdateInstructions();
     Update_Text()
     let adburger = 0
@@ -87,6 +88,12 @@ function Step1()
     GenerateSave();
 }
 
+function Step2()
+{
+    if(Pedestrians.length < burgerGun)
+    SpawnPedestrian();
+}
+
 //Load Save from local storage if it exists.
 if(localStorage.getItem('save')){
     ImportSave(localStorage.getItem('save'))
@@ -94,3 +101,4 @@ if(localStorage.getItem('save')){
 
 let refresh = setInterval(Step, 16);
 setInterval(Step1,5000);
+setInterval(Step2,500);

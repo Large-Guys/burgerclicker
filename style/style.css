@@ -330,3 +330,9 @@ img {
   line-height: calc(10vh - 2px);
   margin-left: 20px;
 }
+#Pedestrian
+{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
