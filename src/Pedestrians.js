@@ -1,6 +1,6 @@
 var DisplayArea = document.getElementById("VisualElements");
 var Pedestrians = [];
-
+var Dedestrians = [];
 class Pedestrian
 {
     constructor()

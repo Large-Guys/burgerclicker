@@ -82,16 +82,24 @@ function Step()
     adburger/=60;
     Burgers += adburger;
     document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC`;
+    if(Pedestrians.length < employees && Pedestrians.length < 256)
+    SpawnPedestrian();
 }
 function Step1()
 {
     GenerateSave();
 }
 
+function Step3()
+{
+    for (let i = 0; i < turrets.length; i++) {
+        turrets[i].shoot()
+    }
+}
+
 function Step2()
 {
-    if(Pedestrians.length < burgerGun)
-    SpawnPedestrian();
+
 }
 
 //Load Save from local storage if it exists.
@@ -101,4 +109,5 @@ if(localStorage.getItem('save')){
 
 let refresh = setInterval(Step, 16);
 setInterval(Step1,5000);
+setInterval(Step3,1000);
 setInterval(Step2,500);
