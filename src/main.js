@@ -61,6 +61,7 @@ function DeleteSave()
     if(confirm('Are you sure you want to delete your save?')){
         if(confirm('Are you really sure though?')){
             ImportSave("AKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAK")
+            GenerateSave();
             window.location.reload();
         }
     }
