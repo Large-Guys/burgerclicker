@@ -87,8 +87,8 @@ function OnClick_Microwave() {
 function OnClick_Factory() {
     let x = Number(document.getElementById('selectNum').value);
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(1250, factories)
-        let ncost = CalculateCost(1250, factories + 1)
+        let cost = CalculateCost(2500, factories)
+        let ncost = CalculateCost(2500, factories + 1)
         if (Burgers >= cost) {
             playSound(sfx_factory)
             Burgers -= cost;

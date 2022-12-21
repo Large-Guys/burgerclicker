@@ -37,7 +37,7 @@ function Update_Text()
     document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
     ncost = CalculateCost(250,microwaves,x)
     document.getElementById("MicrowaveCounter").innerHTML = SimplifyNumber(ncost) + "B " + microwaves + " Microwaves";
-    ncost = CalculateCost(1250,factories,x)
+    ncost = CalculateCost(2500,factories,x)
     document.getElementById("FactoryCounter").innerHTML = SimplifyNumber(ncost) + "B " + factories + " Factories";
     ncost = CalculateCost(50,bonusBurgers,x)
     document.getElementById("BurgerBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
@@ -61,6 +61,7 @@ function DeleteSave()
     if(confirm('Are you sure you want to delete your save?')){
         if(confirm('Are you really sure though?')){
             ImportSave("AKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAK")
+            Pedestrians = []
         }
     }
 }
