@@ -1,5 +1,4 @@
 function playSound(sfx) {
-    sfx = sfx.cloneNode();
     sfx.pause();
     sfx.load();
     sfx.play();

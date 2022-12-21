@@ -61,7 +61,7 @@ function DeleteSave()
     if(confirm('Are you sure you want to delete your save?')){
         if(confirm('Are you really sure though?')){
             ImportSave("AKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAK")
-            Pedestrians = []
+            window.location.reload();
         }
     }
 }
@@ -93,9 +93,7 @@ function Step1()
 
 function Step3()
 {
-    for (let i = 0; i < turrets.length; i++) {
-        turrets[i].shoot()
-    }
+    
 }
 
 function Step2()
