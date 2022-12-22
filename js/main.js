@@ -155,7 +155,7 @@ function Step3()
 {
     // This function currently does nothing
     // If there are fewer pedestrians on the screen than the number of employees, and the total number of pedestrians is less than 256,
-    if (Pedestrians.length < employees && Pedestrians.length < 256 && Math.random()>0.8)
+    if (Pedestrians.length < employees && Pedestrians.length < 256 && Math.random()>0.9)
         // call the function to spawn a new pedestrian
         SpawnPedestrian();
 }
