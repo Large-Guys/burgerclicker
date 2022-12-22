@@ -51,7 +51,7 @@ function Update_Text()
     document.getElementById("SquareBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + squareBurger + " Square Burgers";
 
     // Update the text for the number of burger guns
-    ncost = CalculateCost(50000,burgerGun,x)
+    ncost = CalculateCost(100000,burgerGun,x)
     document.getElementById("BurgerGunCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerGun + " Burger Guns";
 
     // Update the text for the number of employees
@@ -71,11 +71,11 @@ function Update_Text()
     document.getElementById("BurgerBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
 
     // Update the text for the number of burger fabricators
-    ncost = CalculateCost(10000,burgerFabricator,x);
+    ncost = CalculateCost(50000,burgerFabricator,x);
     document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
 
     // Update the text for the number of burger bots
-    ncost = CalculateCost(250000,burgerBot,x);
+    ncost = CalculateCost(2500000,burgerBot,x);
     document.getElementById("BurgerBotCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerBot + " Burger Bots";
 }
 

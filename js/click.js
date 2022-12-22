@@ -36,8 +36,8 @@ function OnClick_BurgerGun() {
     let x = Number(document.getElementById('selectNum').value);
     let played_sound = false
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(50000, burgerGun)
-        let ncost = CalculateCost(50000, burgerGun + 1)
+        let cost = CalculateCost(100000, burgerGun)
+        let ncost = CalculateCost(100000, burgerGun + 1)
         if (Burgers >= cost) {
             playSound(sfx_shoot)
             Burgers -= cost;
@@ -64,8 +64,8 @@ function OnClick_Employee() {
 function OnClick_BurgerBot() {
     let x = Number(document.getElementById('selectNum').value);
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(250000, burgerBot)
-        let ncost = CalculateCost(250000, burgerBot + 1)
+        let cost = CalculateCost(2500000, burgerBot)
+        let ncost = CalculateCost(2500000, burgerBot + 1)
         if (Burgers >= cost) {
             playSound(sfx_bot)
             Burgers -= cost;
@@ -119,8 +119,8 @@ function OnClick_BonusBurger() {
 function OnClick_BurgerFabricator() {
     let x = Number(document.getElementById('selectNum').value);
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(10000, burgerFabricator);
-        let ncost = CalculateCost(10000, burgerFabricator + 1);
+        let cost = CalculateCost(50000, burgerFabricator);
+        let ncost = CalculateCost(50000, burgerFabricator + 1);
         if (Burgers > cost) {
             playSound(sfx_fabricator)
             Burgers -= cost;
