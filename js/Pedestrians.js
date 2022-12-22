@@ -28,7 +28,7 @@ class Pedestrian
         for (let i = this.index; i < Pedestrians.length; i++) {
             Pedestrians[i].index -= 1;
         }
-        Burgers += BPS*50;
+        Burgers += BPS*7;
         playSound(sfx_pop);
     }
     update()
