@@ -9,7 +9,6 @@ class Pedestrian
         this.element = document.createElement("img");
         this.element.id = "Pedestrian";
         this.element.src = 'art/PedRun/Ped1.png';
-        // -------------- LUKE TODO, pls make it so once the element is clicked it calls the pop function --------------
         this.element.addEventListener("click", () => {
             this.pop();
           });
