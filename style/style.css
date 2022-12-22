@@ -332,8 +332,7 @@ img {
 }
 #Pedestrian
 {
-  width: 32px;
-  height: 32px;
+  width: 4%;
   position: absolute;
 }
 #Gun

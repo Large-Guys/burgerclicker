@@ -3,13 +3,19 @@ function playSound(sfx) {
     sfx.load();
     sfx.play();
 }
+function playCloneSound(sfx) {
+    let nsfx = sfx.cloneNode();
+    nsfx.pause();
+    nsfx.load();
+    nsfx.play();
+}
 function CalculateBurgersPerClick() {
     let adburgers = 1 * (bonusBurgers + 1);
     adburgers *= squareBurger * squareBurger + 1;
     return adburgers;
 }
 function OnClick_Burger() {
-    playSound(sfx_click)
+    playCloneSound(sfx_click)
     Burgers += CalculateBurgersPerClick();
     
 }

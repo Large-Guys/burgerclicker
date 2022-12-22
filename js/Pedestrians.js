@@ -10,6 +10,9 @@ class Pedestrian
         this.element.id = "Pedestrian";
         this.element.src = 'art/PedRun/Ped1.png';
         // -------------- LUKE TODO, pls make it so once the element is clicked it calls the pop function --------------
+        this.element.addEventListener("click", () => {
+            this.pop();
+          });
         this.x = Math.floor(Math.random()*10)*10;
         this.y = Math.floor(Math.random()*10)*10;
         this.frameTime = 0;
@@ -26,7 +29,7 @@ class Pedestrian
         for (let i = this.index; i < Pedestrians.length; i++) {
             Pedestrians[i].index -= 1;
         }
-        Burgers += BPS*5;
+        Burgers += BPS*50;
         playSound(sfx_pop);
     }
     update()
