@@ -1,6 +1,6 @@
 function GenerateSave()
 {
-    let str = Burgers+":"+employees+":"+microwaves+":"+factories+":"+bonusBurgers+":"+burgerFabricator+":"+squareBurger+":"+burgerGun+":"+burgerBot;
+    let str = Burgers+":"+employees+":"+microwaves+":"+factories+":"+bonusBurgers+":"+burgerFabricator+":"+squareBurger+":"+burgerGun+":"+burgerBot+":"+Date.now();
     let encodedstr = "";
     for (let index = 0; index < str.length; index++) {
         let c = str.charCodeAt(index);
@@ -33,7 +33,9 @@ function ImportSave(save)
     squareBurger = Number(splitcode[6]);
     if(splitcode[7])
     burgerGun = Number(splitcode[7]);
-    if(splitcode[7])
-    burgerBot = Number(splitcode[7]);
+    if(splitcode[8])
+    burgerBot = Number(splitcode[8]);
+    if(splitcode[9])
+    time_sense_last_update = Number(splitcode[9]);
     Update_Text();
 }
