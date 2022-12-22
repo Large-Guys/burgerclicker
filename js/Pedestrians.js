@@ -3,11 +3,13 @@ var Pedestrians = [];
 var Dedestrians = [];
 class Pedestrian
 {
-    constructor()
+    constructor(index)
     {
+        this.index = index
         this.element = document.createElement("img");
         this.element.id = "Pedestrian";
         this.element.src = 'art/PedRun/Ped1.png';
+        // -------------- LUKE TODO, pls make it so once the element is clicked it calls the pop function --------------
         this.x = Math.floor(Math.random()*10)*10;
         this.y = Math.floor(Math.random()*10)*10;
         this.frameTime = 0;
@@ -16,6 +18,16 @@ class Pedestrian
         this.targetY = Math.floor(Math.random()*10)*10;
         this.isDead = false;
         DisplayArea.appendChild(this.element)
+    }
+    pop()
+    {
+        Pedestrians[this.index].element.remove();
+        Pedestrians.splice(this.index,1);
+        for (let i = this.index; i < Pedestrians.length; i++) {
+            Pedestrians[i].index -= 1;
+        }
+        Burgers += BPS*5;
+        playSound(sfx_pop);
     }
     update()
     {
@@ -64,7 +76,7 @@ class Pedestrian
 }
 function SpawnPedestrian()
 {
-    Pedestrians[Pedestrians.length] = new Pedestrian();
+    Pedestrians[Pedestrians.length] = new Pedestrian(Pedestrians.length);
 }
 function UpdatePedestrians()
 {
