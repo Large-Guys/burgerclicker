@@ -16,7 +16,7 @@ var burgerFabricator = 0
 var squareBurger = 0
 var burgerGun = 0
 var burgerBot = 0
-var time_sense_last_update = 0
+var time_sense_last_update = Date.now()
 
 // Check if there is a save data in local storage
 if (localStorage.getItem('save')) {
