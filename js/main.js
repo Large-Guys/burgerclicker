@@ -18,6 +18,12 @@ var burgerGun = 0
 var burgerBot = 0
 var time_sense_last_update = 0
 
+// Check if there is a save data in local storage
+if (localStorage.getItem('save')) {
+    // If there is, import the save data
+    ImportSave(localStorage.getItem('save'));
+}
+
 // Declare variables for audio files
 var sfx_click = new Audio("sfx/click.wav")
 var sfx_scream = new Audio("sfx/BurgerGuyScreamB.wav")
@@ -165,12 +171,6 @@ function Step3()
 function Step2()
 {
     // This function currently does nothing
-}
-
-// Check if there is a save data in local storage
-if (localStorage.getItem('save')) {
-    // If there is, import the save data
-    ImportSave(localStorage.getItem('save'));
 }
 
 // Set an interval to call the update function (Step) every 16 milliseconds
