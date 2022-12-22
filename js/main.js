@@ -16,6 +16,7 @@ var burgerFabricator = 0
 var squareBurger = 0
 var burgerGun = 0
 var burgerBot = 0
+var time_sense_last_update = 0
 
 // Declare variables for audio files
 var sfx_click = new Audio("sfx/click.wav")
@@ -112,6 +113,8 @@ function DeleteSave()
 // Define the update function, which runs 60 times per second
 function Step()
 {
+    let delta_time = (Date.now()-time_sense_last_update)/33
+    console.log(delta_time)
     // Call the function to update the pedestrians on the screen
     UpdatePedestrians();
     // Call the function to update the instructions text
@@ -133,11 +136,12 @@ function Step()
     // Round the BPS to one decimal place
     BPS = Math.round(adburger * 10) / 10;
     // Divide the BPS by the number of updates per second to get the number of burgers per update
-    adburger /= 60;
+    adburger /= (30/delta_time);
     // Add the number of burgers per update to the total number of burgers
     Burgers += adburger;
     // Update the text on the screen to show the BPS and BPC
     document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC`;
+    time_sense_last_update = Date.now();
 }
 
 // Define a function to generate and save the player's game data
@@ -170,7 +174,7 @@ if (localStorage.getItem('save')) {
 }
 
 // Set an interval to call the update function (Step) every 16 milliseconds
-let refresh = setInterval(Step, 16);
+let refresh = setInterval(Step, 33);
 // Set an interval to call the Step1 function every 5 seconds
 setInterval(Step1, 5000);
 // Set an interval to call the Step3 function every second
