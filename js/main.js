@@ -102,11 +102,8 @@ function DeleteSave()
     // Prompt the player to confirm the delete action
     if (confirm('Are you sure you want to delete your save?')) {
         if (confirm('Are you really sure though?')) {
-            // If the player confirms again, import a string that will reset all save data
-            ImportSave("AKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAK");
-            // Generate the new save data
-            GenerateSave();
-            // Reload the page
+            clearInterval(refresh);
+            localStorage.clear();
             window.location.reload();
         }
     }
