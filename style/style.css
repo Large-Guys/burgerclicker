@@ -37,6 +37,8 @@ img {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  /*safari support*/
+  image-rendering: -webkit-optimize-contrast;
 }
 
 #help button {
