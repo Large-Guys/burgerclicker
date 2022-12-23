@@ -20,6 +20,7 @@ class Pedestrian
         this.targetX = Math.floor(Math.random()*10)*10;
         this.targetY = Math.floor(Math.random()*10)*10;
         this.isDead = false;
+        this.speed = 0.33+(Math.random()*0.2)
         DisplayArea.appendChild(this.element)
     }
     pop()
@@ -49,19 +50,19 @@ class Pedestrian
             }
             if(this.targetX < this.x)
             {
-                this.x -= 0.33;
+                this.x -= this.speed;
             }
             else if(this.targetX > this.x)
             {
-                this.x += 0.33;
+                this.x += this.speed;
             }
             if(this.targetY < this.y)
             {
-                this.y -= 0.33;
+                this.y -= this.speed;
             }
             else if(this.targetY > this.y)
             {
-                this.y += 0.33;
+                this.y += this.speed;
             }
             if(Math.abs(this.targetX - this.x) + Math.abs(this.targetY-this.y) < 2)
             {
