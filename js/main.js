@@ -40,6 +40,64 @@ function SimplifyNumber(number)
     return number.toLocaleString();
 }
 
+function BigNumber(number)
+{
+    let finalnumber = "";
+    finalnumber += "num" +" ";
+    while(number >= 1000000000000000000000000000000)
+    {
+        finalnumber += "decillion ";
+        number /= 10000000000000000000000000000000
+    }
+    while(number >= 1000000000000000000000000000)
+    {
+        finalnumber += "nonillion ";
+        number /= 10000000000000000000000000000
+    }
+    while(number >= 1000000000000000000000000)
+    {
+        finalnumber += "octillion ";
+        number /= 10000000000000000000000000
+    }
+    while(number >= 1000000000000000000000)
+    {
+        finalnumber += "septillion ";
+        number /= 10000000000000000000000
+    }
+    while(number >= 1000000000000000000)
+    {
+        finalnumber += "sextillion ";
+        number /= 10000000000000000000
+    }
+    while(number >= 1000000000000000)
+    {
+        finalnumber += "quintillion ";
+        number /= 1000000000000000
+    }
+    while(number >= 1000000000000000)
+    {
+        finalnumber += "quadrillion ";
+        number /= 1000000000000000
+    }
+    while(number >= 1000000000000)
+    {
+        finalnumber += "trillion ";
+        number /= 1000000000000
+    }
+    while(number >= 1000000000)
+    {
+        finalnumber += "billion ";
+        number /= 1000000000
+    }
+    while(number >= 1000000)
+    {
+        finalnumber += "million ";
+        number /= 1000000
+    }
+    finalnumber = finalnumber.replace("num",(Math.round(number*1000)/1000).toLocaleString())
+    return finalnumber
+}
+
 
 // Define a function to update the text displayed on the page
 function Update_Text()
@@ -48,42 +106,42 @@ function Update_Text()
     let x = Number(document.getElementById('selectNum').value);
 
     // Update the text for the number of burgers
-    document.getElementById("BurgerTextCounter").innerHTML = SimplifyNumber(Math.floor(Burgers)) + " Burgers";
+    document.getElementById("BurgerTextCounter").innerHTML = BigNumber(Math.floor(Burgers)) + " Burgers";
 
     // Update the text for the burgers per second (BPS) and burgers per click (BPC)
     document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
 
     // Update the text for the number of square burgers
     let ncost = CalculateCost(25000,squareBurger,x)
-    document.getElementById("SquareBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + squareBurger + " Square Burgers";
+    document.getElementById("SquareBurgerCounter").innerHTML = BigNumber(ncost) + "B " + squareBurger + " Square Burgers";
 
     // Update the text for the number of burger guns
     ncost = CalculateCost(100000,burgerGun,x)
-    document.getElementById("BurgerGunCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerGun + " Burger Guns";
+    document.getElementById("BurgerGunCounter").innerHTML = BigNumber(ncost) + "B " + burgerGun + " Burger Guns";
 
     // Update the text for the number of employees
     ncost = CalculateCost(25,employees,x)
-    document.getElementById("EmployeeCounter").innerHTML = SimplifyNumber(ncost) + "B " + employees + " Employees";
+    document.getElementById("EmployeeCounter").innerHTML = BigNumber(ncost) + "B " + employees + " Employees";
 
     // Update the text for the number of microwaves
     ncost = CalculateCost(250,microwaves,x)
-    document.getElementById("MicrowaveCounter").innerHTML = SimplifyNumber(ncost) + "B " + microwaves + " Microwaves";
+    document.getElementById("MicrowaveCounter").innerHTML = BigNumber(ncost) + "B " + microwaves + " Microwaves";
 
     // Update the text for the number of factories
     ncost = CalculateCost(2500,factories,x)
-    document.getElementById("FactoryCounter").innerHTML = SimplifyNumber(ncost) + "B " + factories + " Factories";
+    document.getElementById("FactoryCounter").innerHTML = BigNumber(ncost) + "B " + factories + " Factories";
 
     // Update the text for the number of bonus burgers
     ncost = CalculateCost(50,bonusBurgers,x)
-    document.getElementById("BurgerBurgerCounter").innerHTML = SimplifyNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
+    document.getElementById("BurgerBurgerCounter").innerHTML = BigNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
 
     // Update the text for the number of burger fabricators
     ncost = CalculateCost(50000,burgerFabricator,x);
-    document.getElementById("BurgerFabricatorCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
+    document.getElementById("BurgerFabricatorCounter").innerHTML = BigNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
 
     // Update the text for the number of burger bots
     ncost = CalculateCost(2500000,burgerBot,x);
-    document.getElementById("BurgerBotCounter").innerHTML = SimplifyNumber(ncost) + "B " + burgerBot + " Burger Bots";
+    document.getElementById("BurgerBotCounter").innerHTML = BigNumber(ncost) + "B " + burgerBot + " Burger Bots";
 }
 
 
