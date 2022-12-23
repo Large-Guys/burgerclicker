@@ -114,34 +114,61 @@ function Update_Text()
     // Update the text for the number of square burgers
     let ncost = CalculateCost(25000,squareBurger,x)
     document.getElementById("SquareBurgerCounter").innerHTML = BigNumber(ncost) + "B " + squareBurger + " Square Burgers";
-
+    if(Burgers >= ncost)
+        document.getElementById("SquareBurgerCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("SquareBurgerCounter").parentElement.style.display = 'none';
     // Update the text for the number of burger guns
     ncost = CalculateCost(100000,burgerGun,x)
     document.getElementById("BurgerGunCounter").innerHTML = BigNumber(ncost) + "B " + burgerGun + " Burger Guns";
+    if(Burgers >= ncost)
+        document.getElementById("BurgerGunCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("BurgerGunCounter").parentElement.style.display = 'none';
 
     // Update the text for the number of employees
     ncost = CalculateCost(25,employees,x)
     document.getElementById("EmployeeCounter").innerHTML = BigNumber(ncost) + "B " + employees + " Employees";
+    if(Burgers >= ncost)
+        document.getElementById("EmployeeCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("EmployeeCounter").parentElement.style.display = 'none';
 
     // Update the text for the number of microwaves
     ncost = CalculateCost(250,microwaves,x)
     document.getElementById("MicrowaveCounter").innerHTML = BigNumber(ncost) + "B " + microwaves + " Microwaves";
-
+    if(Burgers >= ncost)
+        document.getElementById("MicrowaveCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("MicrowaveCounter").parentElement.style.display = 'none';
     // Update the text for the number of factories
     ncost = CalculateCost(2500,factories,x)
     document.getElementById("FactoryCounter").innerHTML = BigNumber(ncost) + "B " + factories + " Factories";
-
+    if(Burgers >= ncost)
+        document.getElementById("FactoryCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("FactoryCounter").parentElement.style.display = 'none';
     // Update the text for the number of bonus burgers
     ncost = CalculateCost(50,bonusBurgers,x)
     document.getElementById("BurgerBurgerCounter").innerHTML = BigNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
-
+    if(Burgers >= ncost)
+        document.getElementById("BurgerBurgerCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("BurgerBurgerCounter").parentElement.style.display = 'none';
     // Update the text for the number of burger fabricators
     ncost = CalculateCost(50000,burgerFabricator,x);
     document.getElementById("BurgerFabricatorCounter").innerHTML = BigNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
-
+    if(Burgers >= ncost)
+        document.getElementById("BurgerFabricatorCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("BurgerFabricatorCounter").parentElement.style.display = 'none';
     // Update the text for the number of burger bots
     ncost = CalculateCost(2500000,burgerBot,x);
     document.getElementById("BurgerBotCounter").innerHTML = BigNumber(ncost) + "B " + burgerBot + " Burger Bots";
+    if(Burgers >= ncost)
+        document.getElementById("BurgerBotCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("BurgerBotCounter").parentElement.style.display = 'none';
 }
 
 
