@@ -34,12 +34,11 @@ function OnClick_SquareBurger() {
 }
 function OnClick_BurgerGun() {
     let x = Number(document.getElementById('selectNum').value);
-    let played_sound = false
+    if(CalculateCost(100000, burgerGun) < Burgers) playSound(sfx_shoot);
     for (let i = 0; i < x; i++) {
         let cost = CalculateCost(100000, burgerGun)
         let ncost = CalculateCost(100000, burgerGun + 1)
         if (Burgers >= cost) {
-            playSound(sfx_shoot)
             Burgers -= cost;
             burgerGun += 1;
             
@@ -49,11 +48,11 @@ function OnClick_BurgerGun() {
 }
 function OnClick_Employee() {
     let x = Number(document.getElementById('selectNum').value);
+    if(CalculateCost(25, employees) < Burgers) playSound(sfx_scream);
     for (let i = 0; i < x; i++) {
         let cost = CalculateCost(25, employees)
         let ncost = CalculateCost(25, employees + 1)
         if (Burgers >= cost) {
-            playSound(sfx_scream)
             Burgers -= cost;
             employees += 1;
             
@@ -63,11 +62,11 @@ function OnClick_Employee() {
 }
 function OnClick_BurgerBot() {
     let x = Number(document.getElementById('selectNum').value);
+    if(CalculateCost(2500000, burgerBot) < Burgers) playSound(sfx_bot);
     for (let i = 0; i < x; i++) {
         let cost = CalculateCost(2500000, burgerBot)
         let ncost = CalculateCost(2500000, burgerBot + 1)
         if (Burgers >= cost) {
-            playSound(sfx_bot)
             Burgers -= cost;
             burgerBot += 1;
             
@@ -77,11 +76,12 @@ function OnClick_BurgerBot() {
 }
 function OnClick_Microwave() {
     let x = Number(document.getElementById('selectNum').value);
+    if(CalculateCost(250, microwaves) < Burgers) playSound(sfx_microwave);
+
     for (let i = 0; i < x; i++) {
         let cost = CalculateCost(250, microwaves)
         let ncost = CalculateCost(250, microwaves + 1)
         if (Burgers >= cost) {
-            playSound(sfx_microwave)
             Burgers -= cost;
             microwaves += 1;
             
@@ -91,11 +91,12 @@ function OnClick_Microwave() {
 }
 function OnClick_Factory() {
     let x = Number(document.getElementById('selectNum').value);
+    if(CalculateCost(2500, factories) < Burgers) playSound(sfx_factory);
+
     for (let i = 0; i < x; i++) {
         let cost = CalculateCost(2500, factories)
         let ncost = CalculateCost(2500, factories + 1)
         if (Burgers >= cost) {
-            playSound(sfx_factory)
             Burgers -= cost;
             factories += 1;
             
@@ -118,11 +119,12 @@ function OnClick_BonusBurger() {
 }
 function OnClick_BurgerFabricator() {
     let x = Number(document.getElementById('selectNum').value);
+    if(CalculateCost(50000, burgerGun) < Burgers) playSound(sfx_fabricator);
+
     for (let i = 0; i < x; i++) {
         let cost = CalculateCost(50000, burgerFabricator);
         let ncost = CalculateCost(50000, burgerFabricator + 1);
         if (Burgers > cost) {
-            playSound(sfx_fabricator)
             Burgers -= cost;
             burgerFabricator += 1;
             
