@@ -34,10 +34,10 @@ function OnClick_SquareBurger() {
 }
 function OnClick_BurgerGun() {
     let x = Number(document.getElementById('selectNum').value);
-    if(CalculateCost(100000, burgerGun) < Burgers) playSound(sfx_shoot);
+    if(CalculateCost(200000, burgerGun) < Burgers) playSound(sfx_shoot);
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(100000, burgerGun)
-        let ncost = CalculateCost(100000, burgerGun + 1)
+        let cost = CalculateCost(200000, burgerGun)
+        let ncost = CalculateCost(200000, burgerGun + 1)
         if (Burgers >= cost) {
             Burgers -= cost;
             burgerGun += 1;

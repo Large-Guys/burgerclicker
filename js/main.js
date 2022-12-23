@@ -119,7 +119,7 @@ function Update_Text()
     else
         document.getElementById("SquareBurgerCounter").parentElement.style.display = 'none';
     // Update the text for the number of burger guns
-    ncost = CalculateCost(100000,burgerGun,x)
+    ncost = CalculateCost(200000,burgerGun,x)
     document.getElementById("BurgerGunCounter").innerHTML = BigNumber(ncost) + "B " + burgerGun + " Burger Guns";
     if(Burgers >= ncost)
         document.getElementById("BurgerGunCounter").parentElement.style.display = 'block';
