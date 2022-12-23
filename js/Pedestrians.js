@@ -12,6 +12,7 @@ class Pedestrian
         this.element.addEventListener("click", () => {
             this.pop();
           });
+        this.element.classList.add("ScaleButton");
         this.x = Math.floor(Math.random()*10)*10;
         this.y = Math.floor(Math.random()*10)*10;
         this.frameTime = 0;

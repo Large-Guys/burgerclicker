@@ -16,6 +16,7 @@ body {
   width: 100vw;
   margin: 0px;
   font-family: Font;
+  overflow: hidden;
 }
 
 @font-face {
@@ -265,6 +266,16 @@ img {
 
 #buildings ul li img:hover {
   width: 50px;
+}
+
+#VisualElements img{
+  width: 4%;
+  transition: width 0.4s;
+  display: inline-block;
+  cursor: pointer;
+}
+#VisualElements img:hover {
+  width: 5%;
 }
 
 #buildings ul li h1 {
