@@ -351,3 +351,11 @@ img {
   height: 32px;
   position: absolute;
 }
+.ScaleButton
+{
+  transition: all 0.1s;
+}
+.ScaleButton:hover
+{
+  transform: scale(1.25,1.25);
+}

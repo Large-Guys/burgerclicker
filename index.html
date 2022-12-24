@@ -13,6 +13,8 @@
         <a href="https://discord.gg/8fgUufRZNs"><h1>Discord!</h1></a>
         <button onclick="help()" id="helpBtn">?</button>
         <button onclick="DeleteSave()" id="deleteSave" style="font-size: 20px">Delete Save</button>
+        <button onclick="OpenSkillTree()" id="SkillTreeButton" style="font-size: 20px">Skill Tree</button>
+        <h1 id="SkillPointLoadBar">12312B/4545634566B</h1>
     </div>
     <div id="buildings">
         <h1>Products</h1>
@@ -115,9 +117,82 @@
             </p>
         </div>
     </div>
-
+    <div id="SkillTree" style="position: absolute; left: 0%; top: calc(10% - 2px); width: 100%; height: 100%; display: none;">
+        <!--luke pls leave these comments it's for my skill tree generator-->
+        <div  style="position: absolute; left: 0%; top: 0%; width: 100%; height: 100%; overflow-y:auto; background-color: rgba(0, 0, 0, 1);">
+            <div style="position: absolute; display: inline; left:42.5%; top:50%; width: 15%; height: 100%; text-align: center;" id="Skill_Tree">
+            Skill Tree 1SP<img src="art/skill_tree/Tree.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Skill_Tree()">
+            </div>
+            <div style="position: absolute; display: none; left:17.5%; top:70%; width: 15%; height: 100%; text-align: center;" id="Ingredients">
+            Ingredients 1SP<img src="art/skill_tree/Apple.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Ingredients()">
+            </div>
+            <div style="position: absolute; display: none; left:5%; top:90%; width: 15%; height: 100%; text-align: center;" id="Veggies">
+            Veggies 1SP<img src="art/skill_tree/Carrot.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Veggies()">
+            </div>
+            <div style="position: absolute; display: none; left:-1.25%; top:110%; width: 15%; height: 100%; text-align: center;" id="Lettuce">
+            Lettuce 1SP<img src="art/skill_tree/Lettuce.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Lettuce()">
+            </div>
+            <div style="position: absolute; display: none; left:-1.25%; top:130%; width: 15%; height: 100%; text-align: center;" id="Onions">
+            Onions 2SP<img src="art/skill_tree/Onion.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Onions()">
+            </div>
+            <div style="position: absolute; display: none; left:11.25%; top:110%; width: 15%; height: 100%; text-align: center;" id="Tomato">
+            Tomato 3SP<img src="art/skill_tree/Tomato.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Tomato()">
+            </div>
+            <div style="position: absolute; display: none; left:11.25%; top:130%; width: 15%; height: 100%; text-align: center;" id="Mushroom">
+            Mushroom 4SP<img src="art/skill_tree/Mushroom.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Mushroom()">
+            </div>
+            <div style="position: absolute; display: none; left:30%; top:90%; width: 15%; height: 100%; text-align: center;" id="Cheeses">
+            Cheeses 1SP<img src="art/skill_tree/Cheese.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Cheeses()">
+            </div>
+            <div style="position: absolute; display: none; left:23.75%; top:110%; width: 15%; height: 100%; text-align: center;" id="Cheddar">
+            Cheddar 2SP<img src="art/skill_tree/Cheese.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Cheddar()">
+            </div>
+            <div style="position: absolute; display: none; left:23.75%; top:130%; width: 15%; height: 100%; text-align: center;" id="Monterey_Jack">
+            Monterey Jack 2SP<img src="art/skill_tree/Monterey Jack.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Monterey_Jack()">
+            </div>
+            <div style="position: absolute; display: none; left:36.25%; top:110%; width: 15%; height: 100%; text-align: center;" id="Gouda">
+            Gouda 3SP<img src="art/skill_tree/Gouda.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Gouda()">
+            </div>
+            <div style="position: absolute; display: none; left:36.25%; top:130%; width: 15%; height: 100%; text-align: center;" id="Swiss">
+            Swiss 3SP<img src="art/skill_tree/Swiss.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Swiss()">
+            </div>
+            <div style="position: absolute; display: none; left:36.25%; top:150%; width: 15%; height: 100%; text-align: center;" id="Blue">
+            Blue 4SP<img src="art/skill_tree/Blue.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Blue()">
+            </div>
+            <div style="position: absolute; display: none; left:23.75%; top:170%; width: 15%; height: 100%; text-align: center;" id="Meat">
+            Meat 5SP<img src="art/skill_tree/Meat.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Meat()">
+            </div>
+            <div style="position: absolute; display: none; left:23.75%; top:190%; width: 15%; height: 100%; text-align: center;" id="Bacon">
+            Bacon 5SP<img src="art/skill_tree/Bacon.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Bacon()">
+            </div>
+            <div style="position: absolute; display: inline; left:23.75%; top:210%; width: 15%; height: 100%; text-align: center;" id="Wagyu">
+            Wagyu 10SP<img src="art/skill_tree/Wagyu.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Wagyu()">
+            </div>
+            <div style="position: absolute; display: none; left:48.75%; top:170%; width: 15%; height: 100%; text-align: center;" id="Condiments">
+            Condiments 4SP<img src="art/skill_tree/Condiments.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Condiments()">
+            </div>
+            <div style="position: absolute; display: none; left:42.5%; top:190%; width: 15%; height: 100%; text-align: center;" id="Ketchup">
+            Ketchup 4SP<img src="art/skill_tree/Ketchup.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Ketchup()">
+            </div>
+            <div style="position: absolute; display: none; left:42.5%; top:210%; width: 15%; height: 100%; text-align: center;" id="BBQ_Sause">
+            BBQ Sause 5SP<img src="art/skill_tree/BBQ.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_BBQ_Sause()">
+            </div>
+            <div style="position: absolute; display: none; left:55%; top:190%; width: 15%; height: 100%; text-align: center;" id="Mustard">
+            Mustard 4SP<img src="art/skill_tree/Mustard.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Mustard()">
+            </div>
+            <div style="position: absolute; display: none; left:55%; top:210%; width: 15%; height: 100%; text-align: center;" id="Mayo">
+            Mayo 5SP<img src="art/skill_tree/Mayo.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Mayo()">
+            </div>
+            <div style="position: absolute; display: none; left:67.5%; top:70%; width: 15%; height: 100%; text-align: center;" id="Production">
+            Production 1SP<img src="art/skill_tree/Gear.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Production()">
+            </div>
+            </div>
+            <!--End of replacement-->
+        <h1 style="position: relative; left: 0%; top: 5%; text-align: center; font-weight: bolder; font-size: 5vw;">Skill Tree</h1>
+        <h2 style="position: relative; left: 0%; top: 5%; text-align: center; font-weight: bolder; font-size: 2.5vw;" id="SkillPoints">Skill Points</h2>
+    </div>
+    <script src="js/tree.js"></script>
     <script src="js/Pedestrians.js"></script>
-    <script src="js/gun.js"></script>
     <script src="js/click.js"></script>
     <script src="js/save.js"></script>
     <script src="js/instructions.js"></script>

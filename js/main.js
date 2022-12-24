@@ -16,12 +16,16 @@ var burgerFabricator = 0
 var squareBurger = 0
 var burgerGun = 0
 var burgerBot = 0
+var skill_points = 0;
 var time_sense_last_update = Date.now()
+var bonusBPS = 1;
+var totalBurgers = 0;
+var skillPointCost = 500;
 
 // Check if there is a save data in local storage
-if (localStorage.getItem('save')) {
+if (localStorage.getItem('save') && localStorage.getItem('skill_save')) {
     // If there is, import the save data
-    ImportSave(localStorage.getItem('save'));
+    ImportSave(localStorage.getItem('save'),localStorage.getItem('skill_save'));
 }
 
 // Declare variables for audio files
@@ -102,17 +106,18 @@ function BigNumber(number)
 // Define a function to update the text displayed on the page
 function Update_Text()
 {
+    document.getElementById("SkillPointLoadBar").innerHTML = BigNumber(Math.floor((totalBurgers)))+"/"+BigNumber(skillPointCost);
     // Get the value selected in the "selectNum" element
     let x = Number(document.getElementById('selectNum').value);
 
     // Update the text for the number of burgers
     document.getElementById("BurgerTextCounter").innerHTML = BigNumber(Math.floor(Burgers)) + " Burgers";
 
-    // Update the text for the burgers per second (BPS) and burgers per click (BPC)
-    document.getElementById('bps').innerHTML = `${BPS} BPS ${CalculateBurgersPerClick()} BPC`;
+    // Update the text for the burgers per second (BPS) and burgers per click (BPC) and the Burger Production Multipliyer (BPM)
+    document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC ${SimplifyNumber(bonusBPS)} BPM`;
 
     // Update the text for the number of square burgers
-    let ncost = CalculateCost(25000,squareBurger,x)
+    let ncost = CalculateCost(250000,squareBurger,x)
     document.getElementById("SquareBurgerCounter").innerHTML = BigNumber(ncost) + "B " + squareBurger + " Square Burgers";
     if(Burgers >= ncost)
         document.getElementById("SquareBurgerCounter").parentElement.style.display = 'block';
@@ -149,7 +154,7 @@ function Update_Text()
     else
         document.getElementById("FactoryCounter").parentElement.style.display = 'none';
     // Update the text for the number of bonus burgers
-    ncost = CalculateCost(50,bonusBurgers,x)
+    ncost = CalculateCost(150,bonusBurgers,x)
     document.getElementById("BurgerBurgerCounter").innerHTML = BigNumber(ncost) + "B " + bonusBurgers + " Bonus Burgers";
     if(Burgers >= ncost)
         document.getElementById("BurgerBurgerCounter").parentElement.style.display = 'block';
@@ -169,6 +174,7 @@ function Update_Text()
         document.getElementById("BurgerBotCounter").parentElement.style.display = 'block';
     else
         document.getElementById("BurgerBotCounter").parentElement.style.display = 'none';
+    document.getElementById("SkillPoints").innerHTML = "Skill Points: " + skill_points;
 }
 
 
@@ -200,12 +206,21 @@ function DeleteSave()
         }
     }
 }
-
+function OpenSkillTree()
+{
+    if(document.getElementById("SkillTree").style.display == "none")
+    {
+        document.getElementById("SkillTree").style.display = "inline";
+    }
+    else
+    {
+        document.getElementById("SkillTree").style.display = "none";
+    }
+}
 // Define the update function, which runs 60 times per second
 function Step()
 {
     let delta_time = (Date.now()-time_sense_last_update)/33
-    console.log(delta_time)
     // Call the function to update the pedestrians on the screen
     UpdatePedestrians();
     // Call the function to update the instructions text
@@ -223,15 +238,21 @@ function Step()
     adburger += burgerFabricator * (1000 + (factories * 50));
     adburger += burgerGun * (5000);
     adburger += burgerBot * (13503.9 * 10);
-
+    adburger *= bonusBPS;
     // Round the BPS to one decimal place
     BPS = Math.round(adburger * 10) / 10;
     // Divide the BPS by the number of updates per second to get the number of burgers per update
     adburger /= (30/delta_time);
     // Add the number of burgers per update to the total number of burgers
     Burgers += adburger;
+    totalBurgers += adburger;
+    if(totalBurgers > skillPointCost)
+    {
+        skill_points += 1;
+        skillPointCost*=2;
+    }
     // Update the text on the screen to show the BPS and BPC
-    document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC`;
+    document.getElementById('bps').innerHTML = `${SimplifyNumber(BPS)} BPS ${SimplifyNumber(CalculateBurgersPerClick())} BPC ${SimplifyNumber(bonusBPS)} BPM`;
     time_sense_last_update = Date.now();
 }
 

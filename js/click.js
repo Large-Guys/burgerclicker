@@ -16,14 +16,15 @@ function CalculateBurgersPerClick() {
 }
 function OnClick_Burger() {
     playCloneSound(sfx_click)
+    totalBurgers += CalculateBurgersPerClick();
     Burgers += CalculateBurgersPerClick();
     
 }
 function OnClick_SquareBurger() {
     let x = Number(document.getElementById('selectNum').value);
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(25000, squareBurger)
-        let ncost = CalculateCost(25000, squareBurger + 1)
+        let cost = CalculateCost(250000, squareBurger)
+        let ncost = CalculateCost(250000, squareBurger + 1)
         if (Burgers >= cost) {
             Burgers -= cost;
             squareBurger += 1;
@@ -107,8 +108,8 @@ function OnClick_Factory() {
 function OnClick_BonusBurger() {
     let x = Number(document.getElementById('selectNum').value);
     for (let i = 0; i < x; i++) {
-        let cost = CalculateCost(50, bonusBurgers)
-        let ncost = CalculateCost(50, bonusBurgers + 1)
+        let cost = CalculateCost(150, bonusBurgers)
+        let ncost = CalculateCost(150, bonusBurgers + 1)
         if (Burgers >= cost) {
             Burgers -= cost;
             bonusBurgers += 1;

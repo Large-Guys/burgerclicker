@@ -31,6 +31,7 @@ class Pedestrian
             Pedestrians[i].index -= 1;
         }
         Burgers += BPS*7;
+        totalBurgers += BPS*7;
         playSound(sfx_pop);
     }
     update()
