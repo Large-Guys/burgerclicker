@@ -3,6 +3,7 @@ function OnClickSkillTree_Skill_Tree()
 {
     if(skill_points >= 1 && !purchased_skill_Skill_Tree)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Skill_Tree").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Skill_Tree = true;
         document.getElementById("Ingredients").style.display = "inline"
@@ -15,6 +16,7 @@ function OnClickSkillTree_Ingredients()
 {
     if(skill_points >= 1 && !purchased_skill_Ingredients)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Ingredients").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Ingredients = true;
         document.getElementById("Veggies").style.display = "inline"
@@ -27,6 +29,7 @@ function OnClickSkillTree_Veggies()
 {
     if(skill_points >= 1 && !purchased_skill_Veggies)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Veggies = true;
         document.getElementById("Veggies").firstElementChild.style.filter = "brightness(100%)"
         document.getElementById("Lettuce").style.display = "inline"
@@ -39,6 +42,7 @@ function OnClickSkillTree_Lettuce()
 {
     if(skill_points >= 1 && !purchased_skill_Lettuce)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Lettuce").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Lettuce = true;
         document.getElementById("Onions").style.display = "inline"
@@ -52,6 +56,7 @@ function OnClickSkillTree_Onions()
 {
     if(skill_points >= 2 && !purchased_skill_Onions)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Onions").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Onions = true;
         
@@ -65,6 +70,7 @@ function OnClickSkillTree_Tomato()
 {
     if(skill_points >= 3 && !purchased_skill_Tomato)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Tomato").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Tomato = true;
         document.getElementById("Mushroom").style.display = "inline"
@@ -78,6 +84,7 @@ function OnClickSkillTree_Mushroom()
 {
     if(skill_points >= 4 && !purchased_skill_Mushroom)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Mushroom").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Mushroom = true;
         
@@ -91,6 +98,7 @@ function OnClickSkillTree_Cheeses()
 {
     if(skill_points >= 1 && !purchased_skill_Cheeses)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Cheeses").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Cheeses = true;
         document.getElementById("Cheddar").style.display = "inline"
@@ -103,6 +111,7 @@ function OnClickSkillTree_Cheddar()
 {
     if(skill_points >= 2 && !purchased_skill_Cheddar)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Cheddar").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Cheddar = true;
         document.getElementById("Monterey_Jack").style.display = "inline"
@@ -116,6 +125,7 @@ function OnClickSkillTree_Monterey_Jack()
 {
     if(skill_points >= 2 && !purchased_skill_Monterey_Jack)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Monterey_Jack").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Monterey_Jack = true;
         
@@ -129,6 +139,7 @@ function OnClickSkillTree_Gouda()
 {
     if(skill_points >= 3 && !purchased_skill_Gouda)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Gouda").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Gouda = true;
         document.getElementById("Swiss").style.display = "inline"
@@ -142,6 +153,7 @@ function OnClickSkillTree_Swiss()
 {
     if(skill_points >= 3 && !purchased_skill_Swiss)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Swiss").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Swiss = true;
         document.getElementById("Blue").style.display = "inline"
@@ -155,6 +167,7 @@ function OnClickSkillTree_Blue()
 {
     if(skill_points >= 4 && !purchased_skill_Blue)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Blue = true;
         document.getElementById("Blue").firstElementChild.style.filter = "brightness(100%)"
         document.getElementById("Meat").style.display = "inline"
@@ -169,6 +182,7 @@ function OnClickSkillTree_Meat()
 {
     if(skill_points >= 5 && !purchased_skill_Meat)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Meat = true;
         document.getElementById("Meat").firstElementChild.style.filter = "brightness(100%)"
         document.getElementById("Bacon").style.display = "inline"
@@ -181,6 +195,7 @@ function OnClickSkillTree_Bacon()
 {
     if(skill_points >= 5 && !purchased_skill_Bacon)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Bacon = true;
         document.getElementById("Bacon").firstElementChild.style.filter = "brightness(100%)"
         document.getElementById("Wagyu").style.display = "inline"
@@ -194,6 +209,7 @@ function OnClickSkillTree_Wagyu()
 {
     if(skill_points >= 10 && !purchased_skill_Wagyu)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Wagyu = true;
         document.getElementById("Wagyu").firstElementChild.style.filter = "brightness(100%)"
         
@@ -207,6 +223,7 @@ function OnClickSkillTree_Condiments()
 {
     if(skill_points >= 4 && !purchased_skill_Condiments)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Condiments = true;
         document.getElementById("Condiments").firstElementChild.style.filter = "brightness(100%)"
         document.getElementById("Ketchup").style.display = "inline"
@@ -219,6 +236,7 @@ function OnClickSkillTree_Ketchup()
 {
     if(skill_points >= 4 && !purchased_skill_Ketchup)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Ketchup = true;
         document.getElementById("Ketchup").firstElementChild.style.filter = "brightness(100%)"
         document.getElementById("BBQ_Sause").style.display = "inline"
@@ -232,6 +250,7 @@ function OnClickSkillTree_BBQ_Sause()
 {
     if(skill_points >= 5 && !purchased_skill_BBQ_Sause)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_BBQ_Sause = true;
         document.getElementById("BBQ_Sause").firstElementChild.style.filter = "brightness(100%)"
         
@@ -245,6 +264,7 @@ function OnClickSkillTree_Mustard()
 {
     if(skill_points >= 4 && !purchased_skill_Mustard)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Mustard = true;
         document.getElementById("Mustard").firstElementChild.style.filter = "brightness(100%)"
         document.getElementById("Mayo").style.display = "inline"
@@ -258,6 +278,7 @@ function OnClickSkillTree_Mayo()
 {
     if(skill_points >= 5 && !purchased_skill_Mayo)
     {
+        playCloneSound(sfx_cymbal);
         purchased_skill_Mayo = true;
         document.getElementById("Mayo").firstElementChild.style.filter = "brightness(100%)"
         
@@ -271,6 +292,7 @@ function OnClickSkillTree_Production()
 {
     if(skill_points >= 1 && !purchased_skill_Production)
     {
+        playCloneSound(sfx_cymbal);
         document.getElementById("Production").firstElementChild.style.filter = "brightness(100%)"
         purchased_skill_Production = true;
         

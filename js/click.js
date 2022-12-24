@@ -4,10 +4,12 @@ function playSound(sfx) {
     sfx.play();
 }
 function playCloneSound(sfx) {
-    let nsfx = sfx.cloneNode();
-    nsfx.pause();
-    nsfx.load();
-    nsfx.play();
+    if(sfx!=null && sfx!=undefined){
+        let nsfx = sfx.cloneNode();
+        nsfx.pause();
+        nsfx.load();
+        nsfx.play();
+    }
 }
 function CalculateBurgersPerClick() {
     let adburgers = 1 * (bonusBurgers + 1);

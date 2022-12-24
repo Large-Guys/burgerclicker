@@ -37,6 +37,7 @@ var sfx_factory = new Audio("sfx/Factory.wav")
 var sfx_microwave = new Audio("sfx/microwave.wav")
 var sfx_fabricator = new Audio("sfx/Fabricator.wav")
 var sfx_pop = new Audio("sfx/Pop.wav")
+var sfx_cymbal = new Audio("sfx/Swell.wav")
 
 //Define a function to add commas to number
 function SimplifyNumber(number)
