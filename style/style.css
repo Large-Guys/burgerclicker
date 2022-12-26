@@ -297,6 +297,11 @@ img {
   background: radial-gradient(circle, rgb(163, 142, 119) 0%, rgba(0, 0, 0, 1) 72%, rgba(0, 0, 0, 1) 100%);
 }
 
+#SkillPointLoadBar
+{
+  font-size: 1vw;
+}
+
 #top {
   width: 100%;
   height: calc(10% - 2px);

@@ -88,7 +88,7 @@ if(skill_save.charAt(21)=='y') OnClickSkillTree_Production()
     if(splitcode[8])
     burgerBot = Number(splitcode[8]);
     if(splitcode[9])
-    time_sense_last_update = Number(splitcode[9]);
+    time_sense_last_update = Date.now();
     if(splitcode[10])
     skill_points = Number(splitcode[10]);
     if(splitcode[11])
