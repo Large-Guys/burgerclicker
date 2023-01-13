@@ -49,6 +49,21 @@ function OnClick_BurgerGun() {
         }
     }
 }
+function OnClick_AlternateDimension()
+{
+    let x = Number(document.getElementById('selectNum').value);
+    if(CalculateCost(200000, AlternateDimensions) < Burgers) playSound(sfx_shoot);
+    for (let i = 0; i < x; i++) {
+        let cost = CalculateCost(1000000000, AlternateDimensions)
+        let ncost = CalculateCost(1000000000, AlternateDimensions + 1)
+        if (Burgers >= cost) {
+            Burgers -= cost;
+            AlternateDimensions += 1;
+            
+            Update_Text();
+        }
+    }
+}
 function OnClick_Employee() {
     let x = Number(document.getElementById('selectNum').value);
     if(CalculateCost(25, employees) < Burgers) playSound(sfx_scream);
@@ -135,6 +150,23 @@ function OnClick_BurgerFabricator() {
         }
     }
 }
+
+function OnClick_HamburgerTree() {
+    let x = Number(document.getElementById('selectNum').value);
+    if(CalculateCost(50000000000, burgerGun) < Burgers) playSound(sfx_fabricator);
+
+    for (let i = 0; i < x; i++) {
+        let cost = CalculateCost(50000000000, BurgerTree);
+        let ncost = CalculateCost(50000000000, BurgerTree + 1);
+        if (Burgers > cost) {
+            Burgers -= cost;
+            BurgerTree += 1;
+            
+            Update_Text();
+        }
+    }
+}
+
 
 function help() {
     document.getElementById('help').style.display = 'block';

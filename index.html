@@ -9,7 +9,7 @@
 
 <body>
     <div id="top">
-        <h1>Burger Clicker</h1>
+        <h1><wowza>Burger Clicker</wowza></h1>
         <a href="https://discord.gg/8fgUufRZNs"><h1>Discord!</h1></a>
         <button onclick="help()" id="helpBtn">?</button>
         <button onclick="DeleteSave()" id="deleteSave" style="font-size: 20px">Delete Save</button>
@@ -53,6 +53,14 @@
                 <img src="art/BurgerBot.png" class="ScaleButton" >
                 <h1 class="Counter" id="BurgerBotCounter">2500000B 0 Burger Bots</h1>
             </li>
+            <li onclick="OnClick_AlternateDimension()">
+                <img src="art/Portal.png" class="ScaleButton" >
+                <h1 class="Counter" id="AlternateDimensionCounter">1000000000B 0 Alternate Dimensions</h1>
+            </li>
+            <li onclick="OnClick_HamburgerTree()">
+                <img src="art/HamburgerTree.png" class="ScaleButton" >
+                <h1 class="Counter" id="BurgerTreeCounter">50000000000B 0 Burgers Trees</h1>
+            </li>
             <li onclick="OnClick_BonusBurger()">
                 <img src="art/BurgerBurger.png" class="ScaleButton" >
                 <h1 class="Counter" id="BurgerBurgerCounter">50B 0 Bonus Burgers</h1>
@@ -77,40 +85,57 @@
         <div id="InfoBox">
             <select name="Info" id="InfoDropdown">
                 <option id="InfoSub"
-                    value="Burger clicker is a game where you click burgers. This is a quick start guide. First, click the burger 25 times, that way you will be able to afford an employee. Click the employee to purchase them. That's basically the entire game! Click the burger some more and buy other products. Hints/Instructions for each object can be found in the dropdown above.">
+                    value="<wowza>Burger Clicker</wowza> is a game where you click burgers. This is a quick start guide. First, click the burger 25 times, that way you will be able to afford an <imp>Employee</imp>. Click the <imp>Employee</imp> to purchase them. That's basically the entire game! Click the burger some more and buy other products. Hints/Instructions for each object can be found in the dropdown above.">
                     Burger Clicker</option>
-                <option id="InfoSub" value="BPS is the number of burgers you produce per second. (Burgers per second)">
+                <option id="InfoSub" value="<imp>BPS</imp> is the number of burgers you produce per second. (Burgers per second)">
                     BPS
                 </option>
-                <option id="InfoSub" value="BPC is the number of burgers you produce per click. (Burgers per click)">BPC
+                <option id="InfoSub" value="<imp>BPC</imp> is the number of burgers you produce per click. (Burgers per click)">BPC
                 </option>
                 <option id="InfoSub"
-                    value="B stands for burgers. So 1000B means 1000 Burgers, not 1000 billion. (Which if it were in the billions, it would be written as 1000 billion)">
+                    value="<imp>B</imp> stands for burgers. So 1000B means 1000 Burgers, not 1000 billion. (Which if it were in the billions, it would be written as 1000 billion)">
                     B</option>
                 <option id="InfoSub"
-                    value="Employees only produce a mere 1 burger per second but they boost most other products including: microwaves, and factories.">
+                    value="<imp>Employees</imp> only produce a mere 1 <imp>BPS</imp> but they boost most other products including: <imp>Microwaves</imp>, and <imp>Factories</imp>.">
                     Employee</option>
                 <option id="InfoSub"
-                    value="Microwaves by default only produce 5 burgers per second, but employees effect these the most. Due to the need for someone to actually place the burgers into the microwaves. Although these are somewhat autonomous.">
+                    value="<imp>Microwaves</imp> by default only produce 5 BPS, but <imp>Employees</imp> effect these the most. Due to the need for someone to actually place the burgers into the <imp>Microwaves</imp>. Although these are somewhat autonomous.">
                     Microwaves</option>
                 <option id="InfoSub"
-                    value="Factories are not as affected by employees as microwaves are, but they do NEED employees to run. It will run at max efficency, producing 150 burgers every second, once you get 15 employees.">
+                    value="<imp>Factories</imp> are not as affected by <imp>Employees</imp> as <imp>Microwaves</imp> are, but they do NEED <imp>Employees</imp> to run. It will run at max efficency, producing 150 <imp>BPS</imp>, once you get 15 <imp>Employees</imp>.">
                     Factories</option>
                 <option id="InfoSub"
-                    value="Burger fabricators do not require anything to run. However, they are boosted by factories and not employees.">
+                    value="<imp>Burger Fabricators</imp> do not require anything to run. However, they are boosted by <imp>Factories</imp> and not <imp>Employees</imp>.">
                     Burger Fabricators</option>
-                <option id="InfoSub" value="Bonus burgers increase the number of burgers you recieve per click.">
+                <option id="InfoSub" value="<imp>Bonus Burgers</imp> increase the number of burgers you recieve per click.">
                     Bonus Burgers
                 </option>
-                <option id="InfoSub" value="Square burgers multiply the number of burgers you get per click.">
+                <option id="InfoSub" value="<imp>Square Burgers</imp> multiply your <imp>BPC</imp>">
                     Square Burgers
                 </option>
-                <option id="InfoSub" value="Burger bots create burgers at mach 10. (In inches per second)">
+                <option id="InfoSub" value="<imp>Burger Bots</imp> create burgers at mach 10. (In inches per second)">
                     Burger Bots
                 </option>
                 <option id="InfoSub"
-                    value="The burger gun shoots a random person every second turning them into 5000 burgers. ">
-                    Burger Gun</option>
+                    value="The <imp>Burger Gun</imp> kills a random customer and covers up the tracks. (5000 <imp>BPS</imp>)">
+                    Burger Gun
+                </option>
+                <option id="InfoSub"
+                    value="Steal 10% of a parallel universes supply of burgers.">
+                    Alternate Dimensions
+                </option>
+                <option id="InfoSub"
+                    value="<imp>Burger Trees</imp> produce little burgers, until saturday. (Harvest Day, Least on sunday, most on saturday)">
+                    Burger Trees
+                </option>
+                <option id="InfoSub"
+                    value="Used to buy global upgrades that effect everything.">
+                    Skill Tree
+                </option>
+                <option id="InfoSub"
+                    value="Used as currency for buying <imp>Skill Tree Upgrades</imp>.">
+                    Skill Point
+                </option>
             </select>
             <p id="InfoDesription">
 
@@ -121,74 +146,74 @@
         <!--luke pls leave these comments it's for my skill tree generator-->
         <div  style="position: absolute; left: 0%; top: 0%; width: 100%; height: 100%; overflow-y:auto; background-color: rgba(0, 0, 11, 1);">
             <div style="position: absolute; display: inline; left:42.5%; top:50%; width: 15%; height: 100%; text-align: center;" id="Skill_Tree">
-            Skill Tree 1SP<img src="art/skill_tree/Tree.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Skill_Tree()">
+            Skill Tree 1SP<img src="art/skill_tree/Tree.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Skill_Tree()">
             </div>
             <div style="position: absolute; display: none; left:17.5%; top:70%; width: 15%; height: 100%; text-align: center;" id="Ingredients">
-            Ingredients 1SP<img src="art/skill_tree/Apple.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Ingredients()">
+            Ingredients 1SP<img src="art/skill_tree/Apple.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Ingredients()">
             </div>
             <div style="position: absolute; display: none; left:5%; top:90%; width: 15%; height: 100%; text-align: center;" id="Veggies">
-            Veggies 1SP<img src="art/skill_tree/Carrot.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Veggies()">
+            Veggies 1SP<img src="art/skill_tree/Carrot.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Veggies()">
             </div>
             <div style="position: absolute; display: none; left:-1.25%; top:110%; width: 15%; height: 100%; text-align: center;" id="Lettuce">
-            Lettuce 1SP<img src="art/skill_tree/Lettuce.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Lettuce()">
+            Lettuce 1SP<img src="art/skill_tree/Lettuce.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Lettuce()">
             </div>
             <div style="position: absolute; display: none; left:-1.25%; top:130%; width: 15%; height: 100%; text-align: center;" id="Onions">
-            Onions 2SP<img src="art/skill_tree/Onion.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Onions()">
+            Onions 2SP<img src="art/skill_tree/Onion.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Onions()">
             </div>
             <div style="position: absolute; display: none; left:11.25%; top:110%; width: 15%; height: 100%; text-align: center;" id="Tomato">
-            Tomato 3SP<img src="art/skill_tree/Tomato.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Tomato()">
+            Tomato 3SP<img src="art/skill_tree/Tomato.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Tomato()">
             </div>
             <div style="position: absolute; display: none; left:11.25%; top:130%; width: 15%; height: 100%; text-align: center;" id="Mushroom">
-            Mushroom 4SP<img src="art/skill_tree/Mushroom.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Mushroom()">
+            Mushroom 4SP<img src="art/skill_tree/Mushroom.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Mushroom()">
             </div>
             <div style="position: absolute; display: none; left:30%; top:90%; width: 15%; height: 100%; text-align: center;" id="Cheeses">
-            Cheeses 1SP<img src="art/skill_tree/Cheese.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Cheeses()">
+            Cheeses 1SP<img src="art/skill_tree/Cheese.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Cheeses()">
             </div>
             <div style="position: absolute; display: none; left:23.75%; top:110%; width: 15%; height: 100%; text-align: center;" id="Cheddar">
-            Cheddar 2SP<img src="art/skill_tree/Cheese.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Cheddar()">
+            Cheddar 2SP<img src="art/skill_tree/Cheese.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Cheddar()">
             </div>
             <div style="position: absolute; display: none; left:23.75%; top:130%; width: 15%; height: 100%; text-align: center;" id="Monterey_Jack">
-            Monterey Jack 2SP<img src="art/skill_tree/Monterey Jack.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Monterey_Jack()">
+            Monterey Jack 2SP<img src="art/skill_tree/Monterey Jack.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Monterey_Jack()">
             </div>
             <div style="position: absolute; display: none; left:36.25%; top:110%; width: 15%; height: 100%; text-align: center;" id="Gouda">
-            Gouda 3SP<img src="art/skill_tree/Gouda.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Gouda()">
+            Gouda 3SP<img src="art/skill_tree/Gouda.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Gouda()">
             </div>
             <div style="position: absolute; display: none; left:36.25%; top:130%; width: 15%; height: 100%; text-align: center;" id="Swiss">
-            Swiss 3SP<img src="art/skill_tree/Swiss.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Swiss()">
+            Swiss 3SP<img src="art/skill_tree/Swiss.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Swiss()">
             </div>
             <div style="position: absolute; display: none; left:36.25%; top:150%; width: 15%; height: 100%; text-align: center;" id="Blue">
-            Blue 4SP<img src="art/skill_tree/Blue.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Blue()">
+            Blue 4SP<img src="art/skill_tree/Blue.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Blue()">
             </div>
             <div style="position: absolute; display: none; left:23.75%; top:170%; width: 15%; height: 100%; text-align: center;" id="Meat">
-            Meat 5SP<img src="art/skill_tree/Meat.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Meat()">
+            Meat 5SP<img src="art/skill_tree/Meat.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Meat()">
             </div>
             <div style="position: absolute; display: none; left:23.75%; top:190%; width: 15%; height: 100%; text-align: center;" id="Bacon">
-            Bacon 5SP<img src="art/skill_tree/Bacon.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Bacon()">
+            Bacon 5SP<img src="art/skill_tree/Bacon.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Bacon()">
             </div>
             <div style="position: absolute; display: none; left:23.75%; top:210%; width: 15%; height: 100%; text-align: center;" id="Wagyu">
-            Wagyu 10SP<img src="art/skill_tree/Wagyu.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Wagyu()">
+            Wagyu 10SP<img src="art/skill_tree/Wagyu.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Wagyu()">
             </div>
             <div style="position: absolute; display: none; left:48.75%; top:170%; width: 15%; height: 100%; text-align: center;" id="Condiments">
-            Condiments 4SP<img src="art/skill_tree/Condiments.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Condiments()">
+            Condiments 4SP<img src="art/skill_tree/Condiments.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Condiments()">
             </div>
             <div style="position: absolute; display: none; left:42.5%; top:190%; width: 15%; height: 100%; text-align: center;" id="Ketchup">
-            Ketchup 4SP<img src="art/skill_tree/Ketchup.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Ketchup()">
+            Ketchup 4SP<img src="art/skill_tree/Ketchup.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Ketchup()">
             </div>
             <div style="position: absolute; display: none; left:42.5%; top:210%; width: 15%; height: 100%; text-align: center;" id="BBQ_Sause">
-            BBQ Sause 5SP<img src="art/skill_tree/BBQ.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_BBQ_Sause()">
+            BBQ Sause 5SP<img src="art/skill_tree/BBQ.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_BBQ_Sause()">
             </div>
             <div style="position: absolute; display: none; left:55%; top:190%; width: 15%; height: 100%; text-align: center;" id="Mustard">
-            Mustard 4SP<img src="art/skill_tree/Mustard.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Mustard()">
+            Mustard 4SP<img src="art/skill_tree/Mustard.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Mustard()">
             </div>
             <div style="position: absolute; display: none; left:55%; top:210%; width: 15%; height: 100%; text-align: center;" id="Mayo">
-            Mayo 5SP<img src="art/skill_tree/Mayo.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Mayo()">
+            Mayo 5SP<img src="art/skill_tree/Mayo.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Mayo()">
             </div>
             <div style="position: absolute; display: none; left:67.5%; top:70%; width: 15%; height: 100%; text-align: center;" id="Production">
-            Production 1SP<img src="art/skill_tree/Gear.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(10%);" class="ScaleButton" onclick="OnClickSkillTree_Production()">
+            Production 1SP<img src="art/skill_tree/Gear.png" style="width:16.666%; position: absolute; top: 5%; left: 42%; filter: brightness(30%);" class="ScaleButton" onclick="OnClickSkillTree_Production()">
             </div>
             </div>
             <!--End of replacement-->
-        <h1 style="position: relative; left: 0%; top: 5%; text-align: center; font-weight: bolder; font-size: 5vw;">Skill Tree</h1>
+        <h1 style="position: relative; left: 0%; top: 5%; text-align: center; font-weight: bolder; font-size: 5vw;"><wowza>Skill Tree</wowza></h1>
         <h2 style="position: relative; left: 0%; top: 5%; text-align: center; font-weight: bolder; font-size: 2.5vw;" id="SkillPoints">Skill Points</h2>
     </div>
     <script src="js/tree.js"></script>

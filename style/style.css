@@ -1,8 +1,5 @@
 * {
   margin: 0%;
-}
-
-.prevent-select {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -21,7 +18,7 @@ body {
 
 @font-face {
   font-family: Font;
-  src: url('../cmunvi.ttf');
+  src: url('../Bigboy.ttf');
 }
 
 button
@@ -118,6 +115,26 @@ img {
   top: 0px;
   text-align: center;
   font-size: 4vw;
+}
+
+imp
+{
+  color: #ff0022;
+}
+wowza
+{
+  background-image: linear-gradient(
+	to right,
+	#cb9b51 0%,
+  #cb9b51 22%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+  #f6f2c0 78%,
+	#cb9b51 100%
+	);
+   color:transparent;
+   -webkit-background-clip:text;
 }
 
 @keyframes bounce {
@@ -255,7 +272,7 @@ img {
   -webkit-transition: -webkit-transform 0.4s;
   transition: width 0.4s;
   display: inline-block;
-  width: 40px;
+  height: 75%;
   cursor: pointer;
   position: absolute;
   left: 0px;

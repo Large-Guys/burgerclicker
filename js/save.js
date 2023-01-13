@@ -1,6 +1,6 @@
 function GenerateSave()
 {
-    let str = Burgers+":"+employees+":"+microwaves+":"+factories+":"+bonusBurgers+":"+burgerFabricator+":"+squareBurger+":"+burgerGun+":"+burgerBot+":"+Date.now()+":"+skill_points+":"+skillPointCost+":"+totalBurgers;
+    let str = Burgers+":"+employees+":"+microwaves+":"+factories+":"+bonusBurgers+":"+burgerFabricator+":"+squareBurger+":"+burgerGun+":"+burgerBot+":"+Date.now()+":"+skill_points+":"+skillPointCost+":"+totalBurgers+":"+AlternateDimensions+":"+BurgerTree;
     let encodedstr = "";
     for (let index = 0; index < str.length; index++) {
         let c = str.charCodeAt(index);
@@ -95,6 +95,10 @@ if(skill_save.charAt(21)=='y') OnClickSkillTree_Production()
     skillPointCost = Number(splitcode[11]);
     if(splitcode[12])
     totalBurgers = Number(splitcode[12]);
+    if(splitcode[13])
+    AlternateDimensions = Number(splitcode[13]);
+    if(splitcode[14])
+    BurgerTree = Number(splitcode[14]);
 
     Update_Text();
 }

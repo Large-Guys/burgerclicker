@@ -16,6 +16,8 @@ var burgerFabricator = 0
 var squareBurger = 0
 var burgerGun = 0
 var burgerBot = 0
+var AlternateDimensions = 0
+var BurgerTree = 0
 var skill_points = 0;
 var time_sense_last_update = Date.now()
 var bonusBPS = 1;
@@ -132,6 +134,14 @@ function Update_Text()
     else
         document.getElementById("BurgerGunCounter").parentElement.style.display = 'none';
 
+    // Update the text for the number of burger guns
+    ncost = CalculateCost(1000000000,AlternateDimensions,x)
+    document.getElementById("AlternateDimensionCounter").innerHTML = BigNumber(ncost) + "B " + AlternateDimensions + " Alternate Dimensions";
+    if(Burgers >= ncost)
+        document.getElementById("AlternateDimensionCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("AlternateDimensionCounter").parentElement.style.display = 'none';
+
     // Update the text for the number of employees
     ncost = CalculateCost(25,employees,x)
     document.getElementById("EmployeeCounter").innerHTML = BigNumber(ncost) + "B " + employees + " Employees";
@@ -161,6 +171,15 @@ function Update_Text()
         document.getElementById("BurgerBurgerCounter").parentElement.style.display = 'block';
     else
         document.getElementById("BurgerBurgerCounter").parentElement.style.display = 'none';
+
+    // Update the text for the number of Burger Tree
+    ncost = CalculateCost(50000000000,BurgerTree,x)
+    document.getElementById("BurgerTreeCounter").innerHTML = BigNumber(ncost) + "B " + BurgerTree + " Burger Trees";
+    if(Burgers >= ncost)
+        document.getElementById("BurgerTreeCounter").parentElement.style.display = 'block';
+    else
+        document.getElementById("BurgerTreeCounter").parentElement.style.display = 'none';
+
     // Update the text for the number of burger fabricators
     ncost = CalculateCost(50000,burgerFabricator,x);
     document.getElementById("BurgerFabricatorCounter").innerHTML = BigNumber(ncost) + "B " + burgerFabricator + " Burger Fabricators";
@@ -193,6 +212,21 @@ function CalculateCost(basecost, numberOfBuildings, number=1)
 
     // Return the total cost
     return n;
+}
+
+
+var months = ["xxx","Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function getMMDD(mth, dy) {
+  return months.indexOf(mth).toString().padStart(2, "0") + dy.toString().padStart(2, "0");
+}  
+
+function findSeason(mth, dy) {
+  if (dy >= 0) {return "Winter";}
+  if (dy >= 2) {return "Spring";}
+  if (dy >=4) {return "Summer";}
+  if (dy >= 6) {return "Autumn";}
+  return "Winter";
 }
 
 // Define a function to delete the player's save data
@@ -238,7 +272,31 @@ function Step()
     adburger += factories * (150 * employees / 15);
     adburger += burgerFabricator * (1000 + (factories * 50));
     adburger += burgerGun * (5000);
+    let BurgerTreeBonus = 1;
+    let season = findSeason(new Date().getMonth(),new Date().getDay());
+    if(season == "Winter")
+    {
+        BurgerTreeBonus = 0.25;
+    }
+    else if(season == "Spring")
+    {
+        BurgerTreeBonus = 0.5;
+    }
+    else if(season == "Summer")
+    {
+        BurgerTreeBonus = 1;
+    }
+    else if(season == "Fall")
+    {
+        BurgerTreeBonus = 25;
+    }
+    adburger += BurgerTree * (1000000*BurgerTreeBonus);
     adburger += burgerBot * (13503.9 * 10);
+
+    //Must be at end
+    adburger += adburger*0.2*(AlternateDimensions)
+
+    //Bonus
     adburger *= bonusBPS;
     // Round the BPS to one decimal place
     BPS = Math.round(adburger * 10) / 10;

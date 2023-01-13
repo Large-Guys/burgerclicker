@@ -1,2 +1,4 @@
 # Burger Clicker
-Game where you click burgers
+Idle Clicker Game where you click **Burgers**
+# Other Stuff
+[Roadmap](md/todo.md)
